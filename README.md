@@ -32,3 +32,6 @@ Se pretender executar os exemplos da documentação como testes unitários utili
 cabal repl --build-depends=QuickCheck,doctest --with-ghc=doctest
 ```
 
+## Projeto efetuado por:
+
+Tiago Matos Guedes a97369
