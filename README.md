@@ -32,10 +32,3 @@ Se pretender executar os exemplos da documentação como testes unitários utili
 cabal repl --build-depends=QuickCheck,doctest --with-ghc=doctest
 ```
 
-## Documentação
-
-Pode gerar a documentação com o [Haddock](https://haskell-haddock.readthedocs.io/).
-
-```bash
-cabal haddock
-```
