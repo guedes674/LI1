@@ -1,0 +1,499 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Tarefa2</title><link href="linuwial.css" rel="stylesheet" type="text/css" title="Linuwial" /><link rel="stylesheet" type="text/css" href="quick-jump.css" /><link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700" /><script src="haddock-bundle.min.js" async="async" type="text/javascript"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({ tex2jax: { processClass: "mathjax", ignoreClass: ".*" } });</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script></head><body><div id="package-header"><span class="caption">primate-kong-0.1.0.0</span><ul class="links" id="page-menu"><li><a href="index.html">Contents</a></li><li><a href="doc-index.html">Index</a></li></ul></div><div id="content"><div id="module-header"><table class="info"><tr><th valign="top">Copyright</th><td>Jeremias do Carmo Almeida de Sousa &lt;a106008@alunos.uminho.pt&gt;<br />Tiago Matos Guedes &lt;a97369@alunos.uminho.pt&gt;</td></tr><tr><th>Safe Haskell</th><td>Safe-Inferred</td></tr><tr><th>Language</th><td>Haskell2010</td></tr></table><p class="caption">Tarefa2</p></div><div id="description"><p class="caption">Description</p><div class="doc"><p>M&#243;dulo para a realiza&#231;&#227;o da Tarefa 2 de LI1 em 2023/24.</p></div></div><div id="synopsis"><details id="syn"><summary>Synopsis</summary><ul class="details-toggle" data-details-id="syn"><li class="src short"><a href="#v:valida">valida</a> :: <a href="LI12324.html#t:Jogo" title="LI12324">Jogo</a> -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Bool.html#t:Bool" title="Data.Bool">Bool</a></li><li class="src short"><a href="#v:verifyChao">verifyChao</a> :: <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Bool.html#t:Bool" title="Data.Bool">Bool</a></li><li class="src short"><a href="#v:verifyResInimigos">verifyResInimigos</a> :: [<a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a>] -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Bool.html#t:Bool" title="Data.Bool">Bool</a></li><li class="src short"><a href="#v:verifyResPlayer">verifyResPlayer</a> :: <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Bool.html#t:Bool" title="Data.Bool">Bool</a></li><li class="src short"><a href="#v:verifyPosicoesIni">verifyPosicoesIni</a> :: <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; [<a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a>] -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Bool.html#t:Bool" title="Data.Bool">Bool</a></li><li class="src short"><a href="#v:verifyIniNumber">verifyIniNumber</a> :: [<a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a>] -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Bool.html#t:Bool" title="Data.Bool">Bool</a></li><li class="src short"><a href="#v:verifyGhostLifes">verifyGhostLifes</a> :: [<a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a>] -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Bool.html#t:Bool" title="Data.Bool">Bool</a></li><li class="src short"><a href="#v:verifyEscadas">verifyEscadas</a> :: <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Posicao" title="LI12324">Posicao</a> -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Bool.html#t:Bool" title="Data.Bool">Bool</a></li><li class="src short"><a href="#v:verifyEscadaComp">verifyEscadaComp</a> :: <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Posicao" title="LI12324">Posicao</a> -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Bool.html#t:Bool" title="Data.Bool">Bool</a></li><li class="src short"><a href="#v:findEscada">findEscada</a> :: <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Posicao" title="LI12324">Posicao</a> -&gt; <a href="LI12324.html#t:Posicao" title="LI12324">Posicao</a></li><li class="src short"><a href="#v:blocoNaMatriz-39-">blocoNaMatriz'</a> :: <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Posicao" title="LI12324">Posicao</a> -&gt; <a href="LI12324.html#t:Bloco" title="LI12324">Bloco</a></li><li class="src short"><a href="#v:verifyAlcapoesLength">verifyAlcapoesLength</a> :: <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Bool.html#t:Bool" title="Data.Bool">Bool</a></li><li class="src short"><a href="#v:lengthAlcList">lengthAlcList</a> :: <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Posicao" title="LI12324">Posicao</a> -&gt; [<a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Prelude.html#t:Double" title="Prelude">Double</a>]</li><li class="src short"><a href="#v:lengthPlayer">lengthPlayer</a> :: <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Prelude.html#t:Double" title="Prelude">Double</a></li><li class="src short"><a href="#v:verifyAlcapaoComp">verifyAlcapaoComp</a> :: <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Posicao" title="LI12324">Posicao</a> -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Prelude.html#t:Double" title="Prelude">Double</a></li><li class="src short"><a href="#v:findAlcapao">findAlcapao</a> :: <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Posicao" title="LI12324">Posicao</a> -&gt; <a href="LI12324.html#t:Posicao" title="LI12324">Posicao</a></li><li class="src short"><a href="#v:verifyColPerInside">verifyColPerInside</a> :: <a href="LI12324.html#t:Jogo" title="LI12324">Jogo</a> -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Bool.html#t:Bool" title="Data.Bool">Bool</a></li><li class="src short"><a href="#v:verifyColInside">verifyColInside</a> :: <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; [(<a href="LI12324.html#t:Colecionavel" title="LI12324">Colecionavel</a>, <a href="LI12324.html#t:Posicao" title="LI12324">Posicao</a>)] -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Bool.html#t:Bool" title="Data.Bool">Bool</a></li><li class="src short"><a href="#v:blocoNaMatriz-39--39-">blocoNaMatriz''</a> :: <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Posicao" title="LI12324">Posicao</a> -&gt; <a href="LI12324.html#t:Bloco" title="LI12324">Bloco</a></li><li class="src short"><a href="#v:verifyIsInside">verifyIsInside</a> :: <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; [<a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a>] -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Bool.html#t:Bool" title="Data.Bool">Bool</a></li><li class="src short"><a href="#v:verifyPlayerInside">verifyPlayerInside</a> :: <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Bool.html#t:Bool" title="Data.Bool">Bool</a></li></ul></details></div><div id="interface"><h1>Documentation</h1><div class="top"><p class="src"><a id="v:valida" class="def">valida</a> :: <a href="LI12324.html#t:Jogo" title="LI12324">Jogo</a> -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Bool.html#t:Bool" title="Data.Bool">Bool</a> <a href="#v:valida" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa2.html#v:valida" title="Tarefa2">valida</a></code> verifica todos os par&#226;metros exigidos (no projeto) para um jogo.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>valida Jogo
+</code></strong>    { mapa = Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Plataforma, Plataforma, Vazio, Vazio, Vazio, Vazio, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ]
+    , inimigos = [Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (0.5,2.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }, Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (1.5,2.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }, Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (2.5,2.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }]
+    , colecionaveis = [(Martelo,(2.5, 5.5)), (Moeda, (4.5, 5.5))]
+    , jogador = Personagem
+        { velocidade = (0,0)
+        , tipo = Jogador
+        , posicao = (1.75,5.5)
+        , direcao = Oeste
+        , tamanho = (2,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 3
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }
+    }
+True
+</pre></div></div><div class="top"><p class="src"><a id="v:verifyChao" class="def">verifyChao</a> :: <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Bool.html#t:Bool" title="Data.Bool">Bool</a> <a href="#v:verifyChao" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa2.html#v:verifyChao" title="Tarefa2">verifyChao</a></code> verifica se o mapa em quest&#227;o tem um &quot;ch&#227;o&quot;.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>verifyChao Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+</code></strong>                                                   ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                   ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                   ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                   ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                   ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                   ]
+False
+</pre><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>verifyChao Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+</code></strong>                                                   ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                   ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                   ,[Plataforma, Plataforma, Vazio, Vazio, Vazio, Vazio, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                   ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                   ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                   ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                   ]
+True
+</pre></div></div><div class="top"><p class="src"><a id="v:verifyResInimigos" class="def">verifyResInimigos</a> :: [<a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a>] -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Bool.html#t:Bool" title="Data.Bool">Bool</a> <a href="#v:verifyResInimigos" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa2.html#v:verifyResInimigos" title="Tarefa2">verifyResInimigos</a></code> verifica se todos os inimigos t&#234;m a caracter&#237;stica <code><a href="LI12324.html#v:ressalta" title="LI12324">ressalta</a></code> a True.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>verifyResInimigos [Personagem
+</code></strong>        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (1.25,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 100
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }, Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (1.5,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 100
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }, Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (1.75,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 100
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }]
+False
+</pre></div></div><div class="top"><p class="src"><a id="v:verifyResPlayer" class="def">verifyResPlayer</a> :: <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Bool.html#t:Bool" title="Data.Bool">Bool</a> <a href="#v:verifyResPlayer" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa2.html#v:verifyResPlayer" title="Tarefa2">verifyResPlayer</a></code> verifica se o jogador tem a caracter&#237;stica <code><a href="LI12324.html#v:ressalta" title="LI12324">ressalta</a></code> a False.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>verifyResPlayer Personagem
+</code></strong>        { velocidade = (0,0)
+        , tipo = Jogador
+        , posicao = (1.75,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 100
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }
+True
+</pre></div></div><div class="top"><p class="src"><a id="v:verifyPosicoesIni" class="def">verifyPosicoesIni</a> :: <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; [<a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a>] -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Bool.html#t:Bool" title="Data.Bool">Bool</a> <a href="#v:verifyPosicoesIni" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa2.html#v:verifyPosicoesIni" title="Tarefa2">verifyPosicoesIni</a></code> verifica se todos os inimigos t&#234;m a caracter&#237;stica <code><a href="LI12324.html#v:posicao" title="LI12324">posicao</a></code> diferente da inicial do jogador.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>verifyPosicoesIni Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+</code></strong>                                                          ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                          ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                          ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                          ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                          ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                          ] 
+        [Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (1.25,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 100
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }, Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (1.5,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 100
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }, Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (1.75,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 100
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }]
+True
+</pre></div></div><div class="top"><p class="src"><a id="v:verifyIniNumber" class="def">verifyIniNumber</a> :: [<a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a>] -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Bool.html#t:Bool" title="Data.Bool">Bool</a> <a href="#v:verifyIniNumber" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa2.html#v:verifyIniNumber" title="Tarefa2">verifyIniNumber</a></code> verifica se o n&#250;mero de inimigos &#233; superior a 2.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>verifyIniNumber [Personagem
+</code></strong>        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (1.25,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 100
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }, Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (1.5,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 100
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }, Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (1.75,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 100
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }]
+True
+</pre></div></div><div class="top"><p class="src"><a id="v:verifyGhostLifes" class="def">verifyGhostLifes</a> :: [<a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a>] -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Bool.html#t:Bool" title="Data.Bool">Bool</a> <a href="#v:verifyGhostLifes" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa2.html#v:verifyGhostLifes" title="Tarefa2">verifyGhostLifes</a></code> verifica se todos os fantasmas t&#234;m exatamente uma vida.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>verifyGhostLifes [Personagem
+</code></strong>        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (1.25,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }, Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (1.5,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }, Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (1.75,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }]
+True
+</pre></div></div><div class="top"><p class="src"><a id="v:verifyEscadas" class="def">verifyEscadas</a> :: <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Posicao" title="LI12324">Posicao</a> -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Bool.html#t:Bool" title="Data.Bool">Bool</a> <a href="#v:verifyEscadas" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa2.html#v:verifyEscadas" title="Tarefa2">verifyEscadas</a></code> verifica a composi&#231;&#227;o de todas as escadas (respeitar as regras do projeto) do mapa em quest&#227;o.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>verifyEscadas m1 = Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Alcapao, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+</code></strong>                                                          ,[Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Plataforma, Vazio, Vazio, Vazio]
+                                                          ,[Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio, Vazio, Vazio]
+                                                          ,[Plataforma, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio, Vazio, Vazio]
+                                                          ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                          ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                           ]
+False
+</pre></div></div><div class="top"><p class="src"><a id="v:verifyEscadaComp" class="def">verifyEscadaComp</a> :: <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Posicao" title="LI12324">Posicao</a> -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Bool.html#t:Bool" title="Data.Bool">Bool</a> <a href="#v:verifyEscadaComp" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa2.html#v:verifyEscadaComp" title="Tarefa2">verifyEscadaComp</a></code> verifica a composi&#231;&#227;o da escada (respeitar as regras do projeto) na posi&#231;&#227;o mais pr&#243;xima a '(x,y)' percorrendo a matriz da esquerda para a direita e de cima para baixo.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>verifyEscadaComp m1 = Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Alcapao, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+</code></strong>                                                              ,[Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Plataforma, Vazio, Vazio, Vazio]
+                                                              ,[Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio, Vazio, Vazio]
+                                                              ,[Plataforma, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio, Vazio, Vazio]
+                                                              ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                              ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                               ]
+False
+</pre><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>verifyEscadaComp m1 = Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+</code></strong>                                                              ,[Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Plataforma, Vazio, Vazio, Vazio]
+                                                              ,[Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio, Vazio, Vazio]
+                                                              ,[Plataforma, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio, Vazio, Vazio]
+                                                              ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                              ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                               ]
+True
+</pre></div></div><div class="top"><p class="src"><a id="v:findEscada" class="def">findEscada</a> :: <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Posicao" title="LI12324">Posicao</a> -&gt; <a href="LI12324.html#t:Posicao" title="LI12324">Posicao</a> <a href="#v:findEscada" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa2.html#v:findEscada" title="Tarefa2">findEscada</a></code> indica a posi&#231;&#227;o da primeira escada a ser encontrada a seguir &#224; posi&#231;&#227;o (x,y), percorrendo a matriz da esquerda para a direita e de cima para baixo.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>findEscada [[Vazio, Vazio, Vazio, Plataforma, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+</code></strong>               ,[Vazio, Vazio, Vazio, Escada, Vazio, Vazio, Plataforma, Vazio, Vazio, Vazio]
+               ,[Vazio, Vazio, Vazio, Escada, Vazio, Vazio, Escada, Vazio, Vazio, Vazio]
+               ,[Vazio, Vazio, Vazio, Escada, Vazio, Vazio, Escada, Vazio, Vazio, Vazio]
+               ,[Vazio, Vazio, Vazio, Escada, Vazio, Vazio, Plataforma, Vazio, Vazio, Vazio]
+               ,[Vazio, Vazio, Vazio, Plataforma, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                ]
+(1.0,3.0)
+</pre></div></div><div class="top"><p class="src"><a id="v:blocoNaMatriz-39-" class="def">blocoNaMatriz'</a> :: <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Posicao" title="LI12324">Posicao</a> -&gt; <a href="LI12324.html#t:Bloco" title="LI12324">Bloco</a> <a href="#v:blocoNaMatriz-39-" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa2.html#v:blocoNaMatriz-39-" title="Tarefa2">blocoNaMatriz'</a></code> indica qual tipo de bloco se situa na posicao em quest&#227;o.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>blocoNaMatriz' (Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+</code></strong>                                                       ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                       ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                       ,[Plataforma, Plataforma, Vazio, Vazio, Vazio, Vazio, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                       ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                       ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                       ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                       ] (1,3)
+Plataforma
+</pre><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>blocoNaMatriz' (Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+</code></strong>                                                       ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                       ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                       ,[Plataforma, Plataforma, Vazio, Vazio, Vazio, Vazio, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                       ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                       ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                       ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                       ] (0,1)
+Vazio
+</pre></div></div><div class="top"><p class="src"><a id="v:verifyAlcapoesLength" class="def">verifyAlcapoesLength</a> :: <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Bool.html#t:Bool" title="Data.Bool">Bool</a> <a href="#v:verifyAlcapoesLength" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa2.html#v:verifyAlcapoesLength" title="Tarefa2">verifyAlcapoesLength</a></code> verifica se todos os alcapoes inclu&#237;dos no mapa n&#227;o t&#234;m largura menor que a largura do jogador.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>verifyAlcapoesLength (Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Alcapao, Alcapao, Alcapao, Alcapao, Alcapao, Alcapao, Alcapao, Alcapao, Alcapao, Alcapao]
+</code></strong>                                                              ,[Alcapao, Alcapao, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                              ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                              ,[Vazio, Alcapao, Alcapao, Alcapao, Alcapao, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                              ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                              ,[Alcapao, Alcapao, Alcapao, Alcapao, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                              ])
+        (Personagem
+        { velocidade = (0,0)
+        , tipo = Jogador
+        , posicao = (1.75,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 100
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        })
+True
+</pre></div></div><div class="top"><p class="src"><a id="v:lengthAlcList" class="def">lengthAlcList</a> :: <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Posicao" title="LI12324">Posicao</a> -&gt; [<a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Prelude.html#t:Double" title="Prelude">Double</a>] <a href="#v:lengthAlcList" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa2.html#v:lengthAlcList" title="Tarefa2">lengthAlcList</a></code> calcula a lista das larguras de todos os Alcapoes do mapa.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>lengthAlcList (Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Alcapao, Alcapao, Alcapao, Alcapao, Alcapao, Alcapao, Alcapao, Alcapao, Alcapao, Alcapao]
+</code></strong>                                                       ,[Alcapao, Alcapao, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                       ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                       ,[Vazio, Alcapao, Alcapao, Alcapao, Alcapao, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                       ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                       ,[Alcapao, Alcapao, Alcapao, Alcapao, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                       ]) (0,0)
+[10.0,2.0,4.0,4.0]
+</pre></div></div><div class="top"><p class="src"><a id="v:lengthPlayer" class="def">lengthPlayer</a> :: <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Prelude.html#t:Double" title="Prelude">Double</a> <a href="#v:lengthPlayer" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa2.html#v:lengthPlayer" title="Tarefa2">lengthPlayer</a></code> calcula a largura do jogador arredonda &#224; unidade acima.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>lengthPlayer Personagem
+</code></strong>        { velocidade = (0,0)
+        , tipo = Jogador
+        , posicao = (1.75,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 100
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }
+1.0
+</pre></div></div><div class="top"><p class="src"><a id="v:verifyAlcapaoComp" class="def">verifyAlcapaoComp</a> :: <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Posicao" title="LI12324">Posicao</a> -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Prelude.html#t:Double" title="Prelude">Double</a> <a href="#v:verifyAlcapaoComp" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa2.html#v:verifyAlcapaoComp" title="Tarefa2">verifyAlcapaoComp</a></code> verifica a composi&#231;&#227;o do alcapao (respeitar as regras do projeto) na posi&#231;&#227;o mais pr&#243;xima a '(x,y)' percorrendo a matriz da esquerda para a direita e de cima para baixo.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>verifyAlcapaoComp Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Alcapao, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+</code></strong>                                                          ,[Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Plataforma, Vazio, Vazio, Vazio]
+                                                          ,[Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio, Vazio, Vazio]
+                                                          ,[Plataforma, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio, Vazio, Vazio]
+                                                          ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                          ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                           ] (0,0)
+1.0
+</pre><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>verifyAlcapaoComp Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+</code></strong>                                                          ,[Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Plataforma, Vazio, Vazio, Vazio]
+                                                          ,[Escada, Vazio, Alcapao, Alcapao, Vazio, Vazio, Escada, Vazio, Vazio, Vazio]
+                                                          ,[Plataforma, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio, Vazio, Vazio]
+                                                          ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                          ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                           ] (0,0)
+2.0
+</pre></div></div><div class="top"><p class="src"><a id="v:findAlcapao" class="def">findAlcapao</a> :: <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Posicao" title="LI12324">Posicao</a> -&gt; <a href="LI12324.html#t:Posicao" title="LI12324">Posicao</a> <a href="#v:findAlcapao" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa2.html#v:findAlcapao" title="Tarefa2">findAlcapao</a></code> indica a posi&#231;&#227;o do primeiro alcapao a ser encontrado a seguir &#224; posi&#231;&#227;o (x,y), percorrendo a matriz da esquerda para a direita e de cima para baixo.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>findAlcapao [[Vazio, Vazio, Vazio, Plataforma, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+</code></strong>               ,[Vazio, Vazio, Vazio, Escada, Vazio, Vazio, Plataforma, Vazio, Vazio, Vazio]
+               ,[Vazio, Vazio, Alcapao, Escada, Vazio, Vazio, Escada, Vazio, Vazio, Vazio]
+               ,[Vazio, Vazio, Vazio, Escada, Vazio, Vazio, Escada, Vazio, Vazio, Vazio]
+               ,[Vazio, Vazio, Vazio, Escada, Vazio, Vazio, Plataforma, Vazio, Vazio, Vazio]
+               ,[Vazio, Vazio, Vazio, Plataforma, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                ]
+(2.0,2.0)
+</pre></div></div><div class="top"><p class="src"><a id="v:verifyColPerInside" class="def">verifyColPerInside</a> :: <a href="LI12324.html#t:Jogo" title="LI12324">Jogo</a> -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Bool.html#t:Bool" title="Data.Bool">Bool</a> <a href="#v:verifyColPerInside" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa2.html#v:verifyColPerInside" title="Tarefa2">verifyColPerInside</a></code> verifica se todos os colecion&#225;veis, inimigos e jogador se encontram num bloco do tipo <code><a href="LI12324.html#v:Vazio" title="LI12324">Vazio</a></code>.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>verifyColPerInside Jogo
+</code></strong>    { mapa = Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Plataforma, Plataforma, Vazio, Vazio, Vazio, Vazio, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ]
+    , inimigos = [Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (0.5,2.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }, Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (1.5,2.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }, Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (2.5,2.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }]
+    , colecionaveis = [(Martelo,(2.5, 5.5)), (Moeda, (4.5, 5.5))]
+    , jogador = Personagem
+        { velocidade = (0,0)
+        , tipo = Jogador
+        , posicao = (1.75,5.5)
+        , direcao = Oeste
+        , tamanho = (2,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 3
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }
+    }
+True
+</pre></div></div><div class="top"><p class="src"><a id="v:verifyColInside" class="def">verifyColInside</a> :: <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; [(<a href="LI12324.html#t:Colecionavel" title="LI12324">Colecionavel</a>, <a href="LI12324.html#t:Posicao" title="LI12324">Posicao</a>)] -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Bool.html#t:Bool" title="Data.Bool">Bool</a> <a href="#v:verifyColInside" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa2.html#v:verifyColInside" title="Tarefa2">verifyColInside</a></code> verifica se todos os colecion&#225;veis se encontram num bloco <code><a href="LI12324.html#v:Vazio" title="LI12324">Vazio</a></code>.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>verifyColInside (Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+</code></strong>                                                         ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                         ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                         ,[Plataforma, Plataforma, Vazio, Vazio, Vazio, Vazio, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                         ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                         ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                         ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                         ]) [(Martelo,(2.5, 5.5)), (Moeda, (4.5, 5.5))]
+True
+</pre></div></div><div class="top"><p class="src"><a id="v:blocoNaMatriz-39--39-" class="def">blocoNaMatriz''</a> :: <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Posicao" title="LI12324">Posicao</a> -&gt; <a href="LI12324.html#t:Bloco" title="LI12324">Bloco</a> <a href="#v:blocoNaMatriz-39--39-" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa2.html#v:blocoNaMatriz-39--39-" title="Tarefa2">blocoNaMatriz''</a></code> indica qual tipo de bloco se situa na posicao em quest&#227;o, adptada para as fun&#231;&#245;es <code>inside</code>.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>blocoNaMatriz (Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+</code></strong>                                                      ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                      ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                      ,[Plataforma, Plataforma, Vazio, Vazio, Vazio, Vazio, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                      ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                      ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                      ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                      ] (1,3)
+Plataforma
+</pre><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>blocoNaMatriz (Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+</code></strong>                                                      ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                      ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                      ,[Plataforma, Plataforma, Vazio, Vazio, Vazio, Vazio, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                      ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                      ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                      ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                      ] (0,1)
+Vazio
+</pre></div></div><div class="top"><p class="src"><a id="v:verifyIsInside" class="def">verifyIsInside</a> :: <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; [<a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a>] -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Bool.html#t:Bool" title="Data.Bool">Bool</a> <a href="#v:verifyIsInside" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa2.html#v:verifyIsInside" title="Tarefa2">verifyIsInside</a></code> verifica se todos os inimigos se encontram num bloco <code><a href="LI12324.html#v:Vazio" title="LI12324">Vazio</a></code>.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>verifyIsInside (Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+</code></strong>                                                       ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                       ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                       ,[Plataforma, Plataforma, Vazio, Vazio, Vazio, Vazio, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                       ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                       ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                       ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                       ]) [Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (0.5,2.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }, Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (1.5,2.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }, Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (2.5,2.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }]
+True
+</pre></div></div><div class="top"><p class="src"><a id="v:verifyPlayerInside" class="def">verifyPlayerInside</a> :: <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Bool.html#t:Bool" title="Data.Bool">Bool</a> <a href="#v:verifyPlayerInside" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa2.html#v:verifyPlayerInside" title="Tarefa2">verifyPlayerInside</a></code> verifica se o jogador se encontra num bloco <code><a href="LI12324.html#v:Vazio" title="LI12324">Vazio</a></code>.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>verifyPlayerInside (Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+</code></strong>                                                            ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                            ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                            ,[Plataforma, Plataforma, Vazio, Vazio, Vazio, Vazio, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                            ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                            ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                            ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                            ]) 
+        Personagem
+        { velocidade = (0,0)
+        , tipo = Jogador
+        , posicao = (1.75,5.5)
+        , direcao = Oeste
+        , tamanho = (2,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 3
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }
+True
+</pre></div></div></div></div><div id="footer"><p>Produced by <a href="http://www.haskell.org/haddock/">Haddock</a> version 2.26.0</p></div></body></html>

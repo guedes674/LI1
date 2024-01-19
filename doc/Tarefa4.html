@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Tarefa4</title><link href="linuwial.css" rel="stylesheet" type="text/css" title="Linuwial" /><link rel="stylesheet" type="text/css" href="quick-jump.css" /><link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700" /><script src="haddock-bundle.min.js" async="async" type="text/javascript"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({ tex2jax: { processClass: "mathjax", ignoreClass: ".*" } });</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script></head><body><div id="package-header"><span class="caption">primate-kong-0.1.0.0</span><ul class="links" id="page-menu"><li><a href="index.html">Contents</a></li><li><a href="doc-index.html">Index</a></li></ul></div><div id="content"><div id="module-header"><table class="info"><tr><th valign="top">Copyright</th><td>Jeremias do Carmo Almeida de Sousa &lt;a106008@alunos.uminho.pt&gt;<br />Tiago Matos Guedes &lt;a97369@alunos.uminho.pt&gt;</td></tr><tr><th>Safe Haskell</th><td>Safe-Inferred</td></tr><tr><th>Language</th><td>Haskell2010</td></tr></table><p class="caption">Tarefa4</p></div><div id="description"><p class="caption">Description</p><div class="doc"><p>M&#243;dulo para a realiza&#231;&#227;o da Tarefa 4 de LI1 em 2023/24.</p></div></div><div id="synopsis"><details id="syn"><summary>Synopsis</summary><ul class="details-toggle" data-details-id="syn"><li class="src short"><a href="#v:atualiza">atualiza</a> :: [<a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Maybe.html#t:Maybe" title="Data.Maybe">Maybe</a> <a href="LI12324.html#t:Acao" title="LI12324">Acao</a>] -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Maybe.html#t:Maybe" title="Data.Maybe">Maybe</a> <a href="LI12324.html#t:Acao" title="LI12324">Acao</a> -&gt; <a href="LI12324.html#t:Jogo" title="LI12324">Jogo</a> -&gt; <a href="LI12324.html#t:Jogo" title="LI12324">Jogo</a></li><li class="src short"><a href="#v:auxAtualizaInimigos">auxAtualizaInimigos</a> :: [<a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Maybe.html#t:Maybe" title="Data.Maybe">Maybe</a> <a href="LI12324.html#t:Acao" title="LI12324">Acao</a>] -&gt; <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; [<a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a>] -&gt; [<a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a>]</li><li class="src short"><a href="#v:auxAtualizaPersonagem">auxAtualizaPersonagem</a> :: <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Maybe.html#t:Maybe" title="Data.Maybe">Maybe</a> <a href="LI12324.html#t:Acao" title="LI12324">Acao</a> -&gt; <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a></li><li class="src short"><a href="#v:acoesInimigos">acoesInimigos</a> :: <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; [<a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a>] -&gt; [<a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Maybe.html#t:Maybe" title="Data.Maybe">Maybe</a> <a href="LI12324.html#t:Acao" title="LI12324">Acao</a>]</li><li class="src short"><a href="#v:auxAcoesInimigosHorizontal">auxAcoesInimigosHorizontal</a> :: <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Maybe.html#t:Maybe" title="Data.Maybe">Maybe</a> <a href="LI12324.html#t:Acao" title="LI12324">Acao</a></li><li class="src short"><a href="#v:auxAcoesInimigosEscadas">auxAcoesInimigosEscadas</a> :: <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Maybe.html#t:Maybe" title="Data.Maybe">Maybe</a> <a href="LI12324.html#t:Acao" title="LI12324">Acao</a></li></ul></details></div><div id="interface"><h1>Documentation</h1><div class="top"><p class="src"><a id="v:atualiza" class="def">atualiza</a> :: [<a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Maybe.html#t:Maybe" title="Data.Maybe">Maybe</a> <a href="LI12324.html#t:Acao" title="LI12324">Acao</a>] -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Maybe.html#t:Maybe" title="Data.Maybe">Maybe</a> <a href="LI12324.html#t:Acao" title="LI12324">Acao</a> -&gt; <a href="LI12324.html#t:Jogo" title="LI12324">Jogo</a> -&gt; <a href="LI12324.html#t:Jogo" title="LI12324">Jogo</a> <a href="#v:atualiza" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa4.html#v:atualiza" title="Tarefa4">atualiza</a></code> atualiza as velocidades das personagens do jogo mediante a sua ac&#227;o.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>atualiza [Just AndarDireita,Nothing,Nothing] Nothing Jogo
+</code></strong>    { mapa = Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Plataforma, Plataforma, Plataforma, Plataforma, Vazio, Vazio, Vazio, Plataforma, Plataforma, Vazio]
+                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ]
+    , inimigos = [Personagem
+        { velocidade = (-1,0)
+        , tipo = Fantasma
+        , posicao = (0.25,2.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = True
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }, Personagem
+        { velocidade = (1,0)
+        , tipo = Fantasma
+        , posicao = (3.5,5.5)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (True,0.0)
+        }, Personagem
+        { velocidade = (1,0)
+        , tipo = Fantasma
+        , posicao = (4.5,5.5)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }]
+    , colecionaveis = [(Martelo,(2.5, 5.5)), (Moeda, (4.5, 5.5))]
+    , jogador = Personagem
+        { velocidade = (-1,0)
+        , tipo = Jogador
+        , posicao = (0.25,2.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 3
+        , pontos = 0
+        , aplicaDano = (False,0.0)
+        }
+    }
+Jogo {mapa = Mapa ((0.5,5.5),Oeste) (0.5,2.5) [[Plataforma,Plataforma,Plataforma,Plataforma,Plataforma,Plataforma,Plataforma,Plataforma,Plataforma,Plataforma],[Vazio,Vazio,Escada,Vazio,Vazio,Vazio,Vazio,Vazio,Vazio,Vazio],[Vazio,Vazio,Escada,Vazio,Vazio,Vazio,Vazio,Vazio,Vazio,Vazio],[Plataforma,Plataforma,Plataforma,Plataforma,Vazio,Vazio,Vazio,Plataforma,Plataforma,Vazio],[Vazio,Vazio,Escada,Vazio,Vazio,Vazio,Vazio,Vazio,Escada,Vazio],[Vazio,Vazio,Escada,Vazio,Vazio,Vazio,Vazio,Vazio,Escada,Vazio],[Plataforma,Plataforma,Plataforma,Plataforma,Plataforma,Plataforma,Plataforma,Plataforma,Plataforma,Plataforma]], inimigos = [Personagem {velocidade = (1.0,0.0), tipo = Fantasma, posicao = (0.25,2.5), direcao = Este, tamanho = (0.5,1.0), emEscada = True, ressalta = True, vida = 1, pontos = 100, aplicaDano = (False,0.0)},Personagem {velocidade = (1.0,0.0), tipo = Fantasma, posicao = (3.5,5.5), direcao = Este, tamanho = (0.5,1.0), emEscada = False, ressalta = True, vida = 1, pontos = 100, aplicaDano = (True,0.0)},Personagem {velocidade = (1.0,0.0), tipo = Fantasma, posicao = (4.5,5.5), direcao = Este, tamanho = (0.5,1.0), emEscada = False, ressalta = True, vida = 1, pontos = 100, aplicaDano = (False,0.0)}], colecionaveis = [(Martelo,(2.5,5.5)),(Moeda,(4.5,5.5))], jogador = Personagem {velocidade = (-1.0,0.0), tipo = Jogador, posicao = (0.25,2.5), direcao = Oeste, tamanho = (0.5,1.0), emEscada = False, ressalta = False, vida = 3, pontos = 0, aplicaDano = (False,0.0)}}
+</pre></div></div><div class="top"><p class="src"><a id="v:auxAtualizaInimigos" class="def">auxAtualizaInimigos</a> :: [<a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Maybe.html#t:Maybe" title="Data.Maybe">Maybe</a> <a href="LI12324.html#t:Acao" title="LI12324">Acao</a>] -&gt; <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; [<a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a>] -&gt; [<a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a>] <a href="#v:auxAtualizaInimigos" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa4.html#v:auxAtualizaInimigos" title="Tarefa4">auxAtualizaInimigos</a></code> atualiza as velocidades dos inimigos mediante as suas ac&#245;es.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>auxAtualizaInimigos [Just AndarDireita,Nothing,Nothing] Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+</code></strong>                                                                                            ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                                                            ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                                                            ,[Plataforma, Plataforma, Plataforma, Plataforma, Vazio, Vazio, Vazio, Plataforma, Plataforma, Vazio]
+                                                                                            ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                                                            ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                                                            ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                                                            ] [Personagem
+        { velocidade = (-1,0)
+        , tipo = Fantasma
+        , posicao = (0.25,2.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = True
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }, Personagem
+        { velocidade = (1,0)
+        , tipo = Fantasma
+        , posicao = (3.5,5.5)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (True,0.0)
+        }, Personagem
+        { velocidade = (1,0)
+        , tipo = Fantasma
+        , posicao = (4.5,5.5)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }]
+[Personagem {velocidade = (1.0,0.0), tipo = Fantasma, posicao = (0.25,2.5), direcao = Este, tamanho = (0.5,1.0), emEscada = True, ressalta = True, vida = 1, pontos = 100, aplicaDano = (False,0.0)},Personagem {velocidade = (1.0,0.0), tipo = Fantasma, posicao = (3.5,5.5), direcao = Este, tamanho = (0.5,1.0), emEscada = False, ressalta = True, vida = 1, pontos = 100, aplicaDano = (True,0.0)},Personagem {velocidade = (1.0,0.0), tipo = Fantasma, posicao = (4.5,5.5), direcao = Este, tamanho = (0.5,1.0), emEscada = False, ressalta = True, vida = 1, pontos = 100, aplicaDano = (False,0.0)}]
+</pre></div></div><div class="top"><p class="src"><a id="v:auxAtualizaPersonagem" class="def">auxAtualizaPersonagem</a> :: <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Maybe.html#t:Maybe" title="Data.Maybe">Maybe</a> <a href="LI12324.html#t:Acao" title="LI12324">Acao</a> -&gt; <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> <a href="#v:auxAtualizaPersonagem" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa4.html#v:auxAtualizaPersonagem" title="Tarefa4">auxAtualizaPersonagem</a></code> atualiza as velocidades da personagem em quest&#227;o.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>auxAtualizaPersonagem Just AndarDireita Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+</code></strong>                                                                                            ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                                                            ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                                                            ,[Plataforma, Plataforma, Plataforma, Plataforma, Vazio, Vazio, Vazio, Plataforma, Plataforma, Vazio]
+                                                                                            ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                                                            ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                                                            ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                                                            ] Personagem
+        { velocidade = (-1,0)
+        , tipo = Fantasma
+        , posicao = (0.25,2.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = True
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }
+Personagem {velocidade = (1.0,0.0), tipo = Fantasma, posicao = (0.25,2.5), direcao = Este, tamanho = (0.5,1.0), emEscada = True, ressalta = True, vida = 1, pontos = 100, aplicaDano = (False,0.0)}
+</pre></div></div><div class="top"><p class="src"><a id="v:acoesInimigos" class="def">acoesInimigos</a> :: <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; [<a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a>] -&gt; [<a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Maybe.html#t:Maybe" title="Data.Maybe">Maybe</a> <a href="LI12324.html#t:Acao" title="LI12324">Acao</a>] <a href="#v:acoesInimigos" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa4.html#v:acoesInimigos" title="Tarefa4">acoesInimigos</a></code> mediante o mapa e a posic&#227;o dos inimigos, cria uma lista de ac&#245;es, cada uma para um inimigo.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>acoesInimigos Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+</code></strong>                                                                                            ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                                                            ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                                                            ,[Plataforma, Plataforma, Plataforma, Plataforma, Vazio, Vazio, Vazio, Plataforma, Plataforma, Vazio]
+                                                                                            ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                                                            ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                                                            ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                                                            ] [Personagem
+        { velocidade = (-1,0)
+        , tipo = Fantasma
+        , posicao = (0.25,2.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = True
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }, Personagem
+        { velocidade = (1,0)
+        , tipo = Fantasma
+        , posicao = (3.5,5.5)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (True,0.0)
+        }, Personagem
+        { velocidade = (1,0)
+        , tipo = Fantasma
+        , posicao = (4.5,5.5)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }]
+[Just AndarDireita,Nothing,Nothing]
+</pre></div></div><div class="top"><p class="src"><a id="v:auxAcoesInimigosHorizontal" class="def">auxAcoesInimigosHorizontal</a> :: <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Maybe.html#t:Maybe" title="Data.Maybe">Maybe</a> <a href="LI12324.html#t:Acao" title="LI12324">Acao</a> <a href="#v:auxAcoesInimigosHorizontal" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa4.html#v:auxAcoesInimigosHorizontal" title="Tarefa4">auxAcoesInimigosHorizontal</a></code> d&#225; as ac&#245;es para inimigos na horizontal.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>auxAcoesInimigosHorizontal Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+</code></strong>                                                                                            ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                                                            ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                                                            ,[Plataforma, Plataforma, Plataforma, Plataforma, Vazio, Vazio, Vazio, Plataforma, Plataforma, Vazio]
+                                                                                            ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                                                            ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                                                            ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                                                            ] Personagem
+        { velocidade = (-1,0)
+        , tipo = Fantasma
+        , posicao = (0.25,2.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = True
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }
+Just AndarDireita
+</pre></div></div><div class="top"><p class="src"><a id="v:auxAcoesInimigosEscadas" class="def">auxAcoesInimigosEscadas</a> :: <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Maybe.html#t:Maybe" title="Data.Maybe">Maybe</a> <a href="LI12324.html#t:Acao" title="LI12324">Acao</a> <a href="#v:auxAcoesInimigosEscadas" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa4.html#v:auxAcoesInimigosEscadas" title="Tarefa4">auxAcoesInimigosEscadas</a></code> d&#225; as ac&#245;es para inimigos em escadas.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>auxAcoesInimigosEscadas Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+</code></strong>                                                                ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                                ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                                ,[Plataforma, Plataforma, Plataforma, Plataforma, Vazio, Vazio, Vazio, Plataforma, Plataforma, Vazio]
+                                                                ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                                ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                                ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                                ] Personagem
+        { velocidade = (0,-1)
+        , tipo = Fantasma
+        , posicao = (2.5,5.5)
+        , direcao = Norte
+        , tamanho = (0.5,1)
+        , emEscada = True
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }
+Nothing
+</pre></div></div></div></div><div id="footer"><p>Produced by <a href="http://www.haskell.org/haddock/">Haddock</a> version 2.26.0</p></div></body></html>

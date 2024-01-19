@@ -1,0 +1,1307 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Tarefa3</title><link href="linuwial.css" rel="stylesheet" type="text/css" title="Linuwial" /><link rel="stylesheet" type="text/css" href="quick-jump.css" /><link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700" /><script src="haddock-bundle.min.js" async="async" type="text/javascript"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({ tex2jax: { processClass: "mathjax", ignoreClass: ".*" } });</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script></head><body><div id="package-header"><span class="caption">primate-kong-0.1.0.0</span><ul class="links" id="page-menu"><li><a href="index.html">Contents</a></li><li><a href="doc-index.html">Index</a></li></ul></div><div id="content"><div id="module-header"><table class="info"><tr><th valign="top">Copyright</th><td>Jeremias do Carmo Almeida de Sousa &lt;a106008@alunos.uminho.pt&gt;<br />Tiago Matos Guedes &lt;a97369@alunos.uminho.pt&gt;</td></tr><tr><th>Safe Haskell</th><td>Safe-Inferred</td></tr><tr><th>Language</th><td>Haskell2010</td></tr></table><p class="caption">Tarefa3</p></div><div id="description"><p class="caption">Description</p><div class="doc"><p>M&#243;dulo para a realiza&#231;&#227;o da Tarefa 3 de LI1 em 2023/24.</p></div></div><div id="synopsis"><details id="syn"><summary>Synopsis</summary><ul class="details-toggle" data-details-id="syn"><li class="src short"><a href="#v:movimenta">movimenta</a> :: <a href="LI12324.html#t:Semente" title="LI12324">Semente</a> -&gt; <a href="LI12324.html#t:Tempo" title="LI12324">Tempo</a> -&gt; <a href="LI12324.html#t:Jogo" title="LI12324">Jogo</a> -&gt; <a href="LI12324.html#t:Jogo" title="LI12324">Jogo</a></li><li class="src short"><a href="#v:aplicaDanoInimigos">aplicaDanoInimigos</a> :: <a href="LI12324.html#t:Jogo" title="LI12324">Jogo</a> -&gt; <a href="LI12324.html#t:Jogo" title="LI12324">Jogo</a></li><li class="src short"><a href="#v:auxAplicaDanoInimigos">auxAplicaDanoInimigos</a> :: <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; [<a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a>] -&gt; [<a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a>]</li><li class="src short"><a href="#v:inimigoMorto">inimigoMorto</a> :: <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Bool.html#t:Bool" title="Data.Bool">Bool</a></li><li class="src short"><a href="#v:decrementaTempoArmaJogador">decrementaTempoArmaJogador</a> :: <a href="LI12324.html#t:Tempo" title="LI12324">Tempo</a> -&gt; <a href="LI12324.html#t:Jogo" title="LI12324">Jogo</a> -&gt; <a href="LI12324.html#t:Jogo" title="LI12324">Jogo</a></li><li class="src short"><a href="#v:auxDecrementaTempoArmaJogador">auxDecrementaTempoArmaJogador</a> :: <a href="LI12324.html#t:Tempo" title="LI12324">Tempo</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a></li><li class="src short"><a href="#v:hitBoxDanoPlayer">hitBoxDanoPlayer</a> :: <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="LI12324.html#t:Hitbox" title="LI12324">Hitbox</a></li><li class="src short"><a href="#v:aplicaDanoJogador">aplicaDanoJogador</a> :: <a href="LI12324.html#t:Jogo" title="LI12324">Jogo</a> -&gt; <a href="LI12324.html#t:Jogo" title="LI12324">Jogo</a></li><li class="src short"><a href="#v:auxAplicaDanoJogador">auxAplicaDanoJogador</a> :: [<a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a>] -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a></li><li class="src short"><a href="#v:playerApanhaColecionavel">playerApanhaColecionavel</a> :: <a href="LI12324.html#t:Jogo" title="LI12324">Jogo</a> -&gt; <a href="LI12324.html#t:Jogo" title="LI12324">Jogo</a></li><li class="src short"><a href="#v:auxPlayerApanhaColecionavel">auxPlayerApanhaColecionavel</a> :: [(<a href="LI12324.html#t:Colecionavel" title="LI12324">Colecionavel</a>, <a href="LI12324.html#t:Posicao" title="LI12324">Posicao</a>)] -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a></li><li class="src short"><a href="#v:retiraColecionavel">retiraColecionavel</a> :: [(<a href="LI12324.html#t:Colecionavel" title="LI12324">Colecionavel</a>, <a href="LI12324.html#t:Posicao" title="LI12324">Posicao</a>)] -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; [(<a href="LI12324.html#t:Colecionavel" title="LI12324">Colecionavel</a>, <a href="LI12324.html#t:Posicao" title="LI12324">Posicao</a>)]</li><li class="src short"><a href="#v:hitBoxColecionavel">hitBoxColecionavel</a> :: <a href="LI12324.html#t:Colecionavel" title="LI12324">Colecionavel</a> -&gt; <a href="LI12324.html#t:Posicao" title="LI12324">Posicao</a> -&gt; <a href="LI12324.html#t:Hitbox" title="LI12324">Hitbox</a></li><li class="src short"><a href="#v:verifyJogadorAlcapao">verifyJogadorAlcapao</a> :: <a href="LI12324.html#t:Jogo" title="LI12324">Jogo</a> -&gt; <a href="LI12324.html#t:Jogo" title="LI12324">Jogo</a></li><li class="src short"><a href="#v:auxVerifyJogadorAlcapao">auxVerifyJogadorAlcapao</a> :: <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a></li><li class="src short"><a href="#v:alteraBlocoNaPos">alteraBlocoNaPos</a> :: [[<a href="LI12324.html#t:Bloco" title="LI12324">Bloco</a>]] -&gt; <a href="LI12324.html#t:Posicao" title="LI12324">Posicao</a> -&gt; [[<a href="LI12324.html#t:Bloco" title="LI12324">Bloco</a>]]</li><li class="src short"><a href="#v:movimentaJogador">movimentaJogador</a> :: <a href="LI12324.html#t:Tempo" title="LI12324">Tempo</a> -&gt; <a href="LI12324.html#t:Jogo" title="LI12324">Jogo</a> -&gt; <a href="LI12324.html#t:Jogo" title="LI12324">Jogo</a></li><li class="src short"><a href="#v:auxMovimentaJogador">auxMovimentaJogador</a> :: <a href="LI12324.html#t:Tempo" title="LI12324">Tempo</a> -&gt; <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a></li><li class="src short"><a href="#v:auxMovimentaJogadorEscadas">auxMovimentaJogadorEscadas</a> :: <a href="LI12324.html#t:Tempo" title="LI12324">Tempo</a> -&gt; <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a></li><li class="src short"><a href="#v:auxMovimentaJogadorHorizontal">auxMovimentaJogadorHorizontal</a> :: <a href="LI12324.html#t:Tempo" title="LI12324">Tempo</a> -&gt; <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a></li><li class="src short"><a href="#v:movimentaInimigos">movimentaInimigos</a> :: <a href="LI12324.html#t:Semente" title="LI12324">Semente</a> -&gt; <a href="LI12324.html#t:Tempo" title="LI12324">Tempo</a> -&gt; <a href="LI12324.html#t:Jogo" title="LI12324">Jogo</a> -&gt; <a href="LI12324.html#t:Jogo" title="LI12324">Jogo</a></li><li class="src short"><a href="#v:auxMovimentaInimigos">auxMovimentaInimigos</a> :: <a href="LI12324.html#t:Semente" title="LI12324">Semente</a> -&gt; <a href="LI12324.html#t:Tempo" title="LI12324">Tempo</a> -&gt; <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; [<a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a>] -&gt; [<a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a>]</li><li class="src short"><a href="#v:movimentaInimigo">movimentaInimigo</a> :: <a href="LI12324.html#t:Semente" title="LI12324">Semente</a> -&gt; <a href="LI12324.html#t:Tempo" title="LI12324">Tempo</a> -&gt; <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a></li><li class="src short"><a href="#v:auxMovimentaInimigoHorizontalEsq">auxMovimentaInimigoHorizontalEsq</a> :: <a href="LI12324.html#t:Semente" title="LI12324">Semente</a> -&gt; <a href="LI12324.html#t:Tempo" title="LI12324">Tempo</a> -&gt; <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a></li><li class="src short"><a href="#v:auxMovimentaInimigoHorizontalDir">auxMovimentaInimigoHorizontalDir</a> :: <a href="LI12324.html#t:Semente" title="LI12324">Semente</a> -&gt; <a href="LI12324.html#t:Tempo" title="LI12324">Tempo</a> -&gt; <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a></li><li class="src short"><a href="#v:auxMovimentaInimigoEscadas">auxMovimentaInimigoEscadas</a> :: <a href="LI12324.html#t:Semente" title="LI12324">Semente</a> -&gt; <a href="LI12324.html#t:Tempo" title="LI12324">Tempo</a> -&gt; <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a></li></ul></details></div><div id="interface"><h1>Documentation</h1><div class="top"><p class="src"><a id="v:movimenta" class="def">movimenta</a> :: <a href="LI12324.html#t:Semente" title="LI12324">Semente</a> -&gt; <a href="LI12324.html#t:Tempo" title="LI12324">Tempo</a> -&gt; <a href="LI12324.html#t:Jogo" title="LI12324">Jogo</a> -&gt; <a href="LI12324.html#t:Jogo" title="LI12324">Jogo</a> <a href="#v:movimenta" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa3.html#v:movimenta" title="Tarefa3">movimenta</a></code> altera o jogo de forma a aplicar todas as fun&#231;&#245;es do m&#243;dulo de forma a movimentar todas as personagens e mapa.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>movimenta 1 0.01  Jogo
+</code></strong>    { mapa = Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Plataforma, Plataforma, Plataforma, Plataforma, Alcapao, Alcapao, Alcapao, Plataforma, Plataforma, Vazio]
+                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ]
+    , inimigos = [Personagem
+        { velocidade = (0,-1)
+        , tipo = Fantasma
+        , posicao = (2.5,5.5)
+        , direcao = Norte
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }, Personagem
+        { velocidade = (1,0)
+        , tipo = Fantasma
+        , posicao = (3.5,5.5)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (True,0.0)
+        }, Personagem
+        { velocidade = (-1,0)
+        , tipo = Fantasma
+        , posicao = (1.9,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }]
+    , colecionaveis = [(Martelo,(2.5, 5.5)), (Moeda, (4.5, 5.5))]
+    , jogador = Personagem
+        { velocidade = (1,0)
+        , tipo = Jogador
+        , posicao = (4.5,2.5)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 3
+        , pontos = 0
+        , aplicaDano = (False,0.0)
+        }
+    }
+</pre><p>Jogo {mapa = Mapa ((0.5,5.5),Oeste) (0.5,2.5) [[Plataforma,Plataforma,Plataforma,Plataforma,Plataforma,Plataforma,Plataforma,Plataforma,Plataforma,Plataforma],[Vazio,Vazio,Escada,Vazio,Vazio,Vazio,Vazio,Vazio,Vazio,Vazio],[Vazio,Vazio,Escada,Vazio,Vazio,Vazio,Vazio,Vazio,Vazio,Vazio],[Plataforma,Plataforma,Plataforma,Plataforma,Vazio,Vazio,Vazio,Plataforma,Plataforma,Vazio],[Vazio,Vazio,Escada,Vazio,Vazio,Vazio,Vazio,Vazio,Escada,Vazio],[Vazio,Vazio,Escada,Vazio,Vazio,Vazio,Vazio,Vazio,Escada,Vazio],[Plataforma,Plataforma,Plataforma,Plataforma,Plataforma,Plataforma,Plataforma,Plataforma,Plataforma,Plataforma]], inimigos = [Personagem {velocidade = (0.0,-1.0), tipo = Fantasma, posicao = (2.5,5.49), direcao = Norte, tamanho = (0.5,1.0), emEscada = True, ressalta = True, vida = 1, pontos = 100, aplicaDano = (False,0.0)},Personagem {velocidade = (1.0,0.0), tipo = Fantasma, posicao = (3.51,5.5), direcao = Este, tamanho = (0.5,1.0), emEscada = False, ressalta = True, vida = 1, pontos = 100, aplicaDano = (True,0.0)},Personagem {velocidade = (-1.0,0.0), tipo = Fantasma, posicao = (1.89,5.5), direcao = Oeste, tamanho = (0.5,1.0), emEscada = False, ressalta = True, vida = 1, pontos = 100, aplicaDano = (False,0.0)}], colecionaveis = [(Martelo,(2.5,5.5)),(Moeda,(4.5,5.5))], jogador = Personagem {velocidade = (1.0,0.0), tipo = Jogador, posicao = (4.51,2.5005), direcao = Este, tamanho = (0.5,1.0), emEscada = False, ressalta = False, vida = 3, pontos = 0, aplicaDano = (False,0.0)}}</p></div></div><div class="top"><p class="src"><a id="v:aplicaDanoInimigos" class="def">aplicaDanoInimigos</a> :: <a href="LI12324.html#t:Jogo" title="LI12324">Jogo</a> -&gt; <a href="LI12324.html#t:Jogo" title="LI12324">Jogo</a> <a href="#v:aplicaDanoInimigos" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa3.html#v:aplicaDanoInimigos" title="Tarefa3">aplicaDanoInimigos</a></code> altera o jogo de forma a aplicar o devido dano se necess&#225;rio aos inimigos.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>aplicaDanoInimigos Jogo
+</code></strong>    { mapa = Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Plataforma, Alcapao, Alcapao, Plataforma, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ]
+    , inimigos = [Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (3.5,2.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }, Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (3.5,5.5)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (True,0.0)
+        }, Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (2.0,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }]
+    , colecionaveis = [(Martelo,(2.5, 5.5)), (Moeda, (4.5, 5.5))]
+    , jogador = Personagem
+        { velocidade = (0,0)
+        , tipo = Jogador
+        , posicao = (1.5,5.5)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 3
+        , pontos = 0
+        , aplicaDano = (True,3.0)
+        }
+    }
+Jogo
+    { mapa = Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Plataforma, Alcapao, Alcapao, Plataforma, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ]
+    , inimigos = [Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (3.5,2.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }, Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (3.5,5.5)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (True,0.0)
+        }, Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (2.0,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 0
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }]
+    , colecionaveis = [(Martelo,(2.5, 5.5)), (Moeda, (4.5, 5.5))]
+    , jogador = Personagem
+        { velocidade = (0,0)
+        , tipo = Jogador
+        , posicao = (1.5,5.5)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 3
+        , pontos = 0
+        , aplicaDano = (True,3.0)
+        }
+    }
+</pre></div></div><div class="top"><p class="src"><a id="v:auxAplicaDanoInimigos" class="def">auxAplicaDanoInimigos</a> :: <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; [<a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a>] -&gt; [<a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a>] <a href="#v:auxAplicaDanoInimigos" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa3.html#v:auxAplicaDanoInimigos" title="Tarefa3">auxAplicaDanoInimigos</a></code> altera na lista de inimigos as vidas dos respetivos caso a hitbox de dano do jogador se intersete com a hitbox dos inimigos.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>hitBoxDanoPlayer Personagem
+</code></strong>        { velocidade = (0,0)
+        , tipo = Jogador
+        , posicao = (1.5,5.5)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (True,10.0)
+        } [Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (3.5,2.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }, Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (3.5,5.5)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (True,0.0)
+        }, Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (2.0,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }]
+[Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (3.5,2.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }, Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (3.5,5.5)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (True,0.0)
+        }, Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (2.0,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 0
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }]
+</pre></div></div><div class="top"><p class="src"><a id="v:inimigoMorto" class="def">inimigoMorto</a> :: <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Bool.html#t:Bool" title="Data.Bool">Bool</a> <a href="#v:inimigoMorto" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa3.html#v:inimigoMorto" title="Tarefa3">inimigoMorto</a></code> verifica se o inimigo j&#225; se encontra morto (vida = 0)</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>inimigoMorto Personagem
+</code></strong>        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (3.5,2.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 0
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }
+True
+</pre></div></div><div class="top"><p class="src"><a id="v:decrementaTempoArmaJogador" class="def">decrementaTempoArmaJogador</a> :: <a href="LI12324.html#t:Tempo" title="LI12324">Tempo</a> -&gt; <a href="LI12324.html#t:Jogo" title="LI12324">Jogo</a> -&gt; <a href="LI12324.html#t:Jogo" title="LI12324">Jogo</a> <a href="#v:decrementaTempoArmaJogador" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa3.html#v:decrementaTempoArmaJogador" title="Tarefa3">decrementaTempoArmaJogador</a></code> altera o jogo de forma a decrementar o tempo que o jogador tem restante armado (se estiver).</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>decrementaTempoArmaJogador 0.10 Jogo
+</code></strong>    { mapa = Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Plataforma, Alcapao, Alcapao, Plataforma, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ]
+    , inimigos = [Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (3.5,2.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }, Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (3.5,5.5)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (True,0.0)
+        }, Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (2.0,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }]
+    , colecionaveis = [(Martelo,(2.5, 5.5)), (Moeda, (4.5, 5.5))]
+    , jogador = Personagem
+        { velocidade = (0,0)
+        , tipo = Jogador
+        , posicao = (1.5,5.5)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 3
+        , pontos = 0
+        , aplicaDano = (True,3.0)
+        }
+    }
+Jogo
+    { mapa = Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Plataforma, Alcapao, Alcapao, Plataforma, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ]
+    , inimigos = [Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (3.5,2.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }, Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (3.5,5.5)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (True,0.0)
+        }, Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (2.0,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }]
+    , colecionaveis = [(Martelo,(2.5, 5.5)), (Moeda, (4.5, 5.5))]
+    , jogador = Personagem
+        { velocidade = (0,0)
+        , tipo = Jogador
+        , posicao = (1.5,5.5)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 3
+        , pontos = 0
+        , aplicaDano = (True,2.90)
+        }
+    }
+</pre></div></div><div class="top"><p class="src"><a id="v:auxDecrementaTempoArmaJogador" class="def">auxDecrementaTempoArmaJogador</a> :: <a href="LI12324.html#t:Tempo" title="LI12324">Tempo</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> <a href="#v:auxDecrementaTempoArmaJogador" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa3.html#v:auxDecrementaTempoArmaJogador" title="Tarefa3">auxDecrementaTempoArmaJogador</a></code> decrementa o tempo que o jogador tem restante armado (se estiver).</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>auxDecrementaArmaJogador Personagem
+</code></strong>        { velocidade = (0,0)
+        , tipo = Jogador
+        , posicao = (0.5,5.5)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (True,3.0)
+        }
+Personagem
+        { velocidade = (0,0)
+        , tipo = Jogador
+        , posicao = (0.5,5.5)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (True,2.90)
+        }
+</pre></div></div><div class="top"><p class="src"><a id="v:hitBoxDanoPlayer" class="def">hitBoxDanoPlayer</a> :: <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="LI12324.html#t:Hitbox" title="LI12324">Hitbox</a> <a href="#v:hitBoxDanoPlayer" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa3.html#v:hitBoxDanoPlayer" title="Tarefa3">hitBoxDanoPlayer</a></code> constroi a Hitbox de dano do jogador caso tenha uma arma.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>hitBoxDanoPlayer Personagem
+</code></strong>        { velocidade = (0,0)
+        , tipo = Jogador
+        , posicao = (0.5,5.5)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (True,10.0)
+        }
+((0.75,6.0),(1.25,5.0))
+</pre></div></div><div class="top"><p class="src"><a id="v:aplicaDanoJogador" class="def">aplicaDanoJogador</a> :: <a href="LI12324.html#t:Jogo" title="LI12324">Jogo</a> -&gt; <a href="LI12324.html#t:Jogo" title="LI12324">Jogo</a> <a href="#v:aplicaDanoJogador" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa3.html#v:aplicaDanoJogador" title="Tarefa3">aplicaDanoJogador</a></code> altera o jogo de forma a aplicar o respetivo dano ao jogador caso seja atingido por um inimigo.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>aplicaDanoJogador Jogo
+</code></strong>    { mapa = Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Plataforma, Alcapao, Alcapao, Plataforma, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ]
+    , inimigos = [Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (3.5,2.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }, Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (5.5,5.5)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (True,0.0)
+        }, Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (1.9,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }]
+    , colecionaveis = [(Martelo,(2.5, 5.5)), (Moeda, (4.5, 5.5))]
+    , jogador = Personagem
+        { velocidade = (0,0)
+        , tipo = Jogador
+        , posicao = (1.5,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 3
+        , pontos = 0
+        , aplicaDano = (True,3.0)
+        }
+    }
+Jogo
+    { mapa = Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Plataforma, Alcapao, Alcapao, Plataforma, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ]
+    , inimigos = [Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (3.5,2.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }, Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (5.5,5.5)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (True,0.0)
+        }, Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (1.9,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }]
+    , colecionaveis = [(Martelo,(2.5, 5.5)), (Moeda, (4.5, 5.5))]
+    , jogador = Personagem
+        { velocidade = (0,0)
+        , tipo = Jogador
+        , posicao = (1.5,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 2
+        , pontos = 0
+        , aplicaDano = (True,3.0)
+        }
+    }
+</pre></div></div><div class="top"><p class="src"><a id="v:auxAplicaDanoJogador" class="def">auxAplicaDanoJogador</a> :: [<a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a>] -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> <a href="#v:auxAplicaDanoJogador" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa3.html#v:auxAplicaDanoJogador" title="Tarefa3">auxAplicaDanoJogador</a></code> verifica se algum inimigo na lista causa algum dano ao jogador.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>auxAplicaDanoJogador [Personagem
+</code></strong>        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (3.5,2.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }, Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (3.5,5.5)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (True,0.0)
+        }, Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (1.9,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }] Personagem
+        { velocidade = (0,0)
+        , tipo = Jogador
+        , posicao = (1.5,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 3
+        , pontos = 0
+        , aplicaDano = (True,3.0)
+        }
+Personagem
+        { velocidade = (0,0)
+        , tipo = Jogador
+        , posicao = (1.5,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 2
+        , pontos = 0
+        , aplicaDano = (True,3.0)
+        }
+</pre></div></div><div class="top"><p class="src"><a id="v:playerApanhaColecionavel" class="def">playerApanhaColecionavel</a> :: <a href="LI12324.html#t:Jogo" title="LI12324">Jogo</a> -&gt; <a href="LI12324.html#t:Jogo" title="LI12324">Jogo</a> <a href="#v:playerApanhaColecionavel" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa3.html#v:playerApanhaColecionavel" title="Tarefa3">playerApanhaColecionavel</a></code> altera o jogo de forma a que se um jogador apanha um colecion&#225;vel, o retira do mapa e adiciona os respetivos efeitos ao jogador.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>playerApanhaColecionavel Jogo
+</code></strong>    { mapa = Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Plataforma, Alcapao, Alcapao, Plataforma, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ]
+    , inimigos = [Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (3.5,2.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }, Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (3.5,5.5)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (True,0.0)
+        }, Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (1.9,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }]
+    , colecionaveis = [(Martelo,(2.5, 5.5)), (Moeda, (4.5, 5.5))]
+    , jogador = Personagem
+        { velocidade = (0,0)
+        , tipo = Jogador
+        , posicao = (2.2,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 3
+        , pontos = 0
+        , aplicaDano = (True,3.0)
+        }
+    }
+Jogo
+    { mapa = Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Plataforma, Alcapao, Alcapao, Plataforma, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ]
+    , inimigos = [Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (3.5,2.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }, Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (3.5,5.5)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (True,0.0)
+        }, Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (1.9,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }]
+    , colecionaveis = [(Moeda, (4.5, 5.5))]
+    , jogador = Personagem
+        { velocidade = (0,0)
+        , tipo = Jogador
+        , posicao = (2.2,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 3
+        , pontos = 0
+        , aplicaDano = (True,13.0)
+        }
+    }
+</pre></div></div><div class="top"><p class="src"><a id="v:auxPlayerApanhaColecionavel" class="def">auxPlayerApanhaColecionavel</a> :: [(<a href="LI12324.html#t:Colecionavel" title="LI12324">Colecionavel</a>, <a href="LI12324.html#t:Posicao" title="LI12324">Posicao</a>)] -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> <a href="#v:auxPlayerApanhaColecionavel" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa3.html#v:auxPlayerApanhaColecionavel" title="Tarefa3">auxPlayerApanhaColecionavel</a></code> afeta o jogador com o respetivo efeito.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>auxPlayerApanhaColecionavel [(Martelo,(2.5, 5.5)), (Moeda, (4.5, 5.5))] Personagem
+</code></strong>        { velocidade = (0,0)
+        , tipo = Jogador
+        , posicao = (2.2,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 3
+        , pontos = 0
+        , aplicaDano = (True,3.0)
+        }
+Personagem
+        { velocidade = (0,0)
+        , tipo = Jogador
+        , posicao = (2.2,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 3
+        , pontos = 0
+        , aplicaDano = (True,13.0)
+        }
+</pre></div></div><div class="top"><p class="src"><a id="v:retiraColecionavel" class="def">retiraColecionavel</a> :: [(<a href="LI12324.html#t:Colecionavel" title="LI12324">Colecionavel</a>, <a href="LI12324.html#t:Posicao" title="LI12324">Posicao</a>)] -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; [(<a href="LI12324.html#t:Colecionavel" title="LI12324">Colecionavel</a>, <a href="LI12324.html#t:Posicao" title="LI12324">Posicao</a>)] <a href="#v:retiraColecionavel" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa3.html#v:retiraColecionavel" title="Tarefa3">retiraColecionavel</a></code> retira o colecion&#225;vel da lista de colecion&#225;veis.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>retiraColecionavel [(Martelo,(2.5, 5.5)), (Moeda, (4.5, 5.5))] Personagem
+</code></strong>        { velocidade = (0,0)
+        , tipo = Jogador
+        , posicao = (2.2,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 3
+        , pontos = 0
+        , aplicaDano = (True,3.0)
+        }
+[(Moeda, (4.5, 5.5))]
+</pre></div></div><div class="top"><p class="src"><a id="v:hitBoxColecionavel" class="def">hitBoxColecionavel</a> :: <a href="LI12324.html#t:Colecionavel" title="LI12324">Colecionavel</a> -&gt; <a href="LI12324.html#t:Posicao" title="LI12324">Posicao</a> -&gt; <a href="LI12324.html#t:Hitbox" title="LI12324">Hitbox</a> <a href="#v:hitBoxColecionavel" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code>hitBoxDanoColecionavel</code> constroi a Hitbox de um colecionavel em quest&#227;o.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>hitBoxDanoColecionavel Martelo (2.5, 5.5)
+</code></strong>((2.0,6.0),(3.0,5.0))
+</pre></div></div><div class="top"><p class="src"><a id="v:verifyJogadorAlcapao" class="def">verifyJogadorAlcapao</a> :: <a href="LI12324.html#t:Jogo" title="LI12324">Jogo</a> -&gt; <a href="LI12324.html#t:Jogo" title="LI12324">Jogo</a> <a href="#v:verifyJogadorAlcapao" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa3.html#v:verifyJogadorAlcapao" title="Tarefa3">verifyJogadorAlcapao</a></code> altera o jogo de forma a que se o jogador estiver em cima de um Alcapao, o Alcapao parta.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>verifyJogadorAlcapao Jogo
+</code></strong>    { mapa = Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Plataforma, Alcapao, Alcapao, Plataforma, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ]
+    , inimigos = [Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (3.5,2.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }, Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (3.5,5.5)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (True,0.0)
+        }, Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (1.9,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }]
+    , colecionaveis = [(Martelo,(2.5, 5.5)), (Moeda, (4.5, 5.5))]
+    , jogador = Personagem
+        { velocidade = (0,0)
+        , tipo = Jogador
+        , posicao = (1.5,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 3
+        , pontos = 0
+        , aplicaDano = (True,3.0)
+        }
+    }
+Jogo
+    { mapa = Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Plataforma, Vazio, Vazio, Plataforma, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ]
+    , inimigos = [Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (3.5,2.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }, Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (3.5,5.5)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (True,0.0)
+        }, Personagem
+        { velocidade = (0,0)
+        , tipo = Fantasma
+        , posicao = (1.9,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }]
+    , colecionaveis = [(Martelo,(2.5, 5.5)), (Moeda, (4.5, 5.5))]
+    , jogador = Personagem
+        { velocidade = (0,0)
+        , tipo = Jogador
+        , posicao = (1.5,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 3
+        , pontos = 0
+        , aplicaDano = (True,3.0)
+        }
+    }
+</pre></div></div><div class="top"><p class="src"><a id="v:auxVerifyJogadorAlcapao" class="def">auxVerifyJogadorAlcapao</a> :: <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> <a href="#v:auxVerifyJogadorAlcapao" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa3.html#v:auxVerifyJogadorAlcapao" title="Tarefa3">auxVerifyJogadorAlcapao</a></code> verifica se o jogador tem um Alcapao em baixo de si, se sim ele parte.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>auxVerifyJogadorAlcapao Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+</code></strong>                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Plataforma, Alcapao, Alcapao, Plataforma, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ] Personagem
+        { velocidade = (0,0)
+        , tipo = Jogador
+        , posicao = (1.5,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 3
+        , pontos = 0
+        , aplicaDano = (True,3.0)
+        }
+Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Plataforma, Vazio, Vazio, Plataforma, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ]
+</pre></div></div><div class="top"><p class="src"><a id="v:alteraBlocoNaPos" class="def">alteraBlocoNaPos</a> :: [[<a href="LI12324.html#t:Bloco" title="LI12324">Bloco</a>]] -&gt; <a href="LI12324.html#t:Posicao" title="LI12324">Posicao</a> -&gt; [[<a href="LI12324.html#t:Bloco" title="LI12324">Bloco</a>]] <a href="#v:alteraBlocoNaPos" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa3.html#v:alteraBlocoNaPos" title="Tarefa3">alteraBlocoNaPos</a></code> altera o bloco na matriz e na posi&#231;&#227;o por um bloco Vazio.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>alteraBlocoNaPos [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+</code></strong>                     ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                     ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                     ,[Plataforma, Alcapao, Alcapao, Plataforma, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                     ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                     ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                     ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                     ] (1,3)
+[[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+,[Plataforma, Vazio, Alcapao, Plataforma, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+]
+</pre></div></div><div class="top"><p class="src"><a id="v:movimentaJogador" class="def">movimentaJogador</a> :: <a href="LI12324.html#t:Tempo" title="LI12324">Tempo</a> -&gt; <a href="LI12324.html#t:Jogo" title="LI12324">Jogo</a> -&gt; <a href="LI12324.html#t:Jogo" title="LI12324">Jogo</a> <a href="#v:movimentaJogador" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa3.html#v:movimentaJogador" title="Tarefa3">movimentaJogador</a></code> movimenta o jogador consoante a sua <code><a href="LI12324.html#v:direcao" title="LI12324">direcao</a></code> e <code><a href="LI12324.html#v:velocidade" title="LI12324">velocidade</a></code>.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>movimentaJogador 0.01 Jogo
+</code></strong>    { mapa = Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Plataforma, Plataforma, Plataforma, Plataforma, Alcapao, Alcapao, Alcapao, Plataforma, Plataforma, Vazio]
+                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ]
+    , inimigos = [Personagem
+        { velocidade = (0,-1)
+        , tipo = Fantasma
+        , posicao = (2.5,5.5)
+        , direcao = Norte
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }, Personagem
+        { velocidade = (1,0)
+        , tipo = Fantasma
+        , posicao = (3.5,5.5)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (True,0.0)
+        }, Personagem
+        { velocidade = (-1,0)
+        , tipo = Fantasma
+        , posicao = (1.9,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }]
+    , colecionaveis = [(Martelo,(2.5, 5.5)), (Moeda, (4.5, 5.5))]
+    , jogador = Personagem
+        { velocidade = (1,0)
+        , tipo = Jogador
+        , posicao = (4.5,2.5)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 3
+        , pontos = 0
+        , aplicaDano = (False,0.0)
+        }
+    }
+Jogo {mapa = Mapa ((0.5,5.5),Oeste) (0.5,2.5) [[Plataforma,Plataforma,Plataforma,Plataforma,Plataforma,Plataforma,Plataforma,Plataforma,Plataforma,Plataforma],[Vazio,Vazio,Escada,Vazio,Vazio,Vazio,Vazio,Vazio,Vazio,Vazio],[Vazio,Vazio,Escada,Vazio,Vazio,Vazio,Vazio,Vazio,Vazio,Vazio],[Plataforma,Plataforma,Plataforma,Plataforma,Alcapao,Alcapao,Alcapao,Plataforma,Plataforma,Vazio],[Vazio,Vazio,Escada,Vazio,Vazio,Vazio,Vazio,Vazio,Escada,Vazio],[Vazio,Vazio,Escada,Vazio,Vazio,Vazio,Vazio,Vazio,Escada,Vazio],[Plataforma,Plataforma,Plataforma,Plataforma,Plataforma,Plataforma,Plataforma,Plataforma,Plataforma,Plataforma]], inimigos = [Personagem {velocidade = (0.0,-1.0), tipo = Fantasma, posicao = (2.5,5.5), direcao = Norte, tamanho = (0.5,1.0), emEscada = False, ressalta = True, vida = 1, pontos = 100, aplicaDano = (False,0.0)},Personagem {velocidade = (1.0,0.0), tipo = Fantasma, posicao = (3.5,5.5), direcao = Este, tamanho = (0.5,1.0), emEscada = False, ressalta = True, vida = 1, pontos = 100, aplicaDano = (True,0.0)},Personagem {velocidade = (-1.0,0.0), tipo = Fantasma, posicao = (1.9,5.5), direcao = Oeste, tamanho = (0.5,1.0), emEscada = False, ressalta = True, vida = 1, pontos = 100, aplicaDano = (False,0.0)}], colecionaveis = [(Martelo,(2.5,5.5)),(Moeda,(4.5,5.5))], jogador = Personagem {velocidade = (1.0,0.0), tipo = Jogador, posicao = (4.51,2.5), direcao = Este, tamanho = (0.5,1.0), emEscada = False, ressalta = False, vida = 3, pontos = 0, aplicaDano = (False,0.0)}}
+</pre></div></div><div class="top"><p class="src"><a id="v:auxMovimentaJogador" class="def">auxMovimentaJogador</a> :: <a href="LI12324.html#t:Tempo" title="LI12324">Tempo</a> -&gt; <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> <a href="#v:auxMovimentaJogador" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa3.html#v:auxMovimentaJogador" title="Tarefa3">auxMovimentaJogador</a></code> auxilia a fun&#231;&#227;o movimentaJogador no que toca as dire&#231;&#245;es.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>auxMovimentaJogador 0.01 Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+</code></strong>                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Plataforma, Plataforma, Plataforma, Plataforma, Alcapao, Alcapao, Alcapao, Plataforma, Plataforma, Vazio]
+                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ] Personagem
+        { velocidade = (1,0)
+        , tipo = Jogador
+        , posicao = (4.5,2.5)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 3
+        , pontos = 0
+        , aplicaDano = (False,0.0)
+        }
+    }
+Personagem {velocidade = (1.0,0.0), tipo = Jogador, posicao = (4.51,2.5), direcao = Este, tamanho = (0.5,1.0), emEscada = False, ressalta = False, vida = 3, pontos = 0, aplicaDano = (False,0.0)}
+</pre></div></div><div class="top"><p class="src"><a id="v:auxMovimentaJogadorEscadas" class="def">auxMovimentaJogadorEscadas</a> :: <a href="LI12324.html#t:Tempo" title="LI12324">Tempo</a> -&gt; <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> <a href="#v:auxMovimentaJogadorEscadas" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa3.html#v:auxMovimentaJogadorEscadas" title="Tarefa3">auxMovimentaJogadorEscadas</a></code> movimenta o jogador apenas em blocos do tipo <code><a href="LI12324.html#v:Escada" title="LI12324">Escada</a></code>.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>auxMovimentaJogadorEscadas 0.01 Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+</code></strong>                                                                        ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                                        ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                                        ,[Plataforma, Plataforma, Plataforma, Plataforma, Vazio, Vazio, Vazio, Plataforma, Plataforma, Vazio]
+                                                                        ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                                        ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                                        ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                                        ] Personagem
+        { velocidade = (0,-1)
+        , tipo = Jogador
+        , posicao = (2.5,5.5)
+        , direcao = Norte
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 3
+        , pontos = 0
+        , aplicaDano = (False,0.0)
+        }
+Personagem
+        { velocidade = (0,-1)
+        , tipo = Jogador
+        , posicao = (2.5,5.49)
+        , direcao = Norte
+        , tamanho = (0.5,1)
+        , emEscada = True
+        , ressalta = False
+        , vida = 3
+        , pontos = 0
+        , aplicaDano = (False,0.0)
+        }
+</pre></div></div><div class="top"><p class="src"><a id="v:auxMovimentaJogadorHorizontal" class="def">auxMovimentaJogadorHorizontal</a> :: <a href="LI12324.html#t:Tempo" title="LI12324">Tempo</a> -&gt; <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> <a href="#v:auxMovimentaJogadorHorizontal" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa3.html#v:auxMovimentaJogadorHorizontal" title="Tarefa3">auxMovimentaJogadorHorizontal</a></code> movimenta o jogador apenas na horizontal ou em saltos conjugados com movimento horizontal.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>auxMovimentaJogadorHorizontal 0.01 Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+</code></strong>                                                                        ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                                        ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                                        ,[Plataforma, Plataforma, Plataforma, Plataforma, Vazio, Vazio, Vazio, Plataforma, Plataforma, Vazio]
+                                                                        ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                                        ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                                        ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                                        ] Personagem
+        { velocidade = (1,1)
+        , tipo = Jogador
+        , posicao = (2.5,5.5)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 3
+        , pontos = 0
+        , aplicaDano = (False,0.0)
+        }
+Personagem
+        { velocidade = (1,1)
+        , tipo = Jogador
+        , posicao = (2.51,5.49)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = True
+        , ressalta = False
+        , vida = 3
+        , pontos = 0
+        , aplicaDano = (False,0.0)
+        }
+</pre></div></div><div class="top"><p class="src"><a id="v:movimentaInimigos" class="def">movimentaInimigos</a> :: <a href="LI12324.html#t:Semente" title="LI12324">Semente</a> -&gt; <a href="LI12324.html#t:Tempo" title="LI12324">Tempo</a> -&gt; <a href="LI12324.html#t:Jogo" title="LI12324">Jogo</a> -&gt; <a href="LI12324.html#t:Jogo" title="LI12324">Jogo</a> <a href="#v:movimentaInimigos" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa3.html#v:movimentaInimigos" title="Tarefa3">movimentaInimigos</a></code> movimenta todos os inimigos apenas no mapa consoante as suas <code><a href="LI12324.html#v:direcao" title="LI12324">direcao</a></code> e <code><a href="LI12324.html#v:velocidade" title="LI12324">velocidade</a></code>.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>movimentaInimigos 0.01 1 Jogo
+</code></strong>    { mapa = Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Plataforma, Plataforma, Plataforma, Plataforma, Alcapao, Alcapao, Alcapao, Plataforma, Plataforma, Vazio]
+                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ]
+    , inimigos = [Personagem
+        { velocidade = (0,-1)
+        , tipo = Fantasma
+        , posicao = (2.5,5.5)
+        , direcao = Norte
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }, Personagem
+        { velocidade = (1,0)
+        , tipo = Fantasma
+        , posicao = (3.5,5.5)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (True,0.0)
+        }, Personagem
+        { velocidade = (-1,0)
+        , tipo = Fantasma
+        , posicao = (1.9,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }]
+    , colecionaveis = [(Martelo,(2.5, 5.5)), (Moeda, (4.5, 5.5))]
+    , jogador = Personagem
+        { velocidade = (1,0)
+        , tipo = Jogador
+        , posicao = (4.5,2.5)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 3
+        , pontos = 0
+        , aplicaDano = (False,0.0)
+        }
+    }
+Jogo
+    { mapa = Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Plataforma, Plataforma, Plataforma, Plataforma, Vazio, Vazio, Vazio, Plataforma, Plataforma, Vazio]
+                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ]
+    , inimigos = [Personagem
+        { velocidade = (1,0)
+        , tipo = Fantasma
+        , posicao = (2.26,2.5)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }, Personagem
+        { velocidade = (1,0)
+        , tipo = Fantasma
+        , posicao = (3.51,5.5)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (True,0.0)
+        }, Personagem
+        { velocidade = (1,0)
+        , tipo = Fantasma
+        , posicao = (1.89,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }]
+    , colecionaveis = [(Martelo,(2.5, 5.5)), (Moeda, (4.5, 5.5))]
+    , jogador = Personagem
+        { velocidade = (1,1)
+        , tipo = Jogador
+        , posicao = (2.5,5.5)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 3
+        , pontos = 0
+        , aplicaDano = (False,0.0)
+        }
+    }
+Jogo {mapa = Mapa ((0.5,5.5),Oeste) (0.5,2.5) [[Plataforma,Plataforma,Plataforma,Plataforma,Plataforma,Plataforma,Plataforma,Plataforma,Plataforma,Plataforma],[Vazio,Vazio,Escada,Vazio,Vazio,Vazio,Vazio,Vazio,Vazio,Vazio],[Vazio,Vazio,Escada,Vazio,Vazio,Vazio,Vazio,Vazio,Vazio,Vazio],[Plataforma,Plataforma,Plataforma,Plataforma,Alcapao,Alcapao,Alcapao,Plataforma,Plataforma,Vazio],[Vazio,Vazio,Escada,Vazio,Vazio,Vazio,Vazio,Vazio,Escada,Vazio],[Vazio,Vazio,Escada,Vazio,Vazio,Vazio,Vazio,Vazio,Escada,Vazio],[Plataforma,Plataforma,Plataforma,Plataforma,Plataforma,Plataforma,Plataforma,Plataforma,Plataforma,Plataforma]], inimigos = [Personagem {velocidade = (0.0,-1.0), tipo = Fantasma, posicao = (2.5,5.49), direcao = Norte, tamanho = (0.5,1.0), emEscada = True, ressalta = True, vida = 1, pontos = 100, aplicaDano = (False,0.0)},Personagem {velocidade = (1.0,0.0), tipo = Fantasma, posicao = (3.51,5.5), direcao = Este, tamanho = (0.5,1.0), emEscada = False, ressalta = True, vida = 1, pontos = 100, aplicaDano = (True,0.0)},Personagem {velocidade = (-1.0,0.0), tipo = Fantasma, posicao = (1.89,5.5), direcao = Oeste, tamanho = (0.5,1.0), emEscada = False, ressalta = True, vida = 1, pontos = 100, aplicaDano = (False,0.0)}], colecionaveis = [(Martelo,(2.5,5.5)),(Moeda,(4.5,5.5))], jogador = Personagem {velocidade = (0.0,-1.0), tipo = Jogador, posicao = (2.5,5.5), direcao = Norte, tamanho = (0.5,1.0), emEscada = False, ressalta = False, vida = 3, pontos = 0, aplicaDano = (False,0.0)}}
+</pre></div></div><div class="top"><p class="src"><a id="v:auxMovimentaInimigos" class="def">auxMovimentaInimigos</a> :: <a href="LI12324.html#t:Semente" title="LI12324">Semente</a> -&gt; <a href="LI12324.html#t:Tempo" title="LI12324">Tempo</a> -&gt; <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; [<a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a>] -&gt; [<a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a>] <a href="#v:auxMovimentaInimigos" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa3.html#v:auxMovimentaInimigos" title="Tarefa3">auxMovimentaInimigos</a></code> movimenta os inimigos que n&#227;o estiverem mortos.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>auxMovimentaInimigos 1 0.01 Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+</code></strong>                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Plataforma, Plataforma, Plataforma, Plataforma, Alcapao, Alcapao, Alcapao, Plataforma, Plataforma, Vazio]
+                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ] [Personagem
+        { velocidade = (0,-1)
+        , tipo = Fantasma
+        , posicao = (2.5,5.5)
+        , direcao = Norte
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }, Personagem
+        { velocidade = (1,0)
+        , tipo = Fantasma
+        , posicao = (3.5,5.5)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (True,0.0)
+        }, Personagem
+        { velocidade = (-1,0)
+        , tipo = Fantasma
+        , posicao = (1.9,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }]
+[Personagem {velocidade = (0.0,-1.0), tipo = Fantasma, posicao = (2.5,5.49), direcao = Norte, tamanho = (0.5,1.0), emEscada = True, ressalta = True, vida = 1, pontos = 100, aplicaDano = (False,0.0)},Personagem {velocidade = (1.0,0.0), tipo = Fantasma, posicao = (3.51,5.5), direcao = Este, tamanho = (0.5,1.0), emEscada = False, ressalta = True, vida = 1, pontos = 100, aplicaDano = (True,0.0)},Personagem {velocidade = (-1.0,0.0), tipo = Fantasma, posicao = (1.89,5.5), direcao = Oeste, tamanho = (0.5,1.0), emEscada = False, ressalta = True, vida = 1, pontos = 100, aplicaDano = (False,0.0)}]
+</pre></div></div><div class="top"><p class="src"><a id="v:movimentaInimigo" class="def">movimentaInimigo</a> :: <a href="LI12324.html#t:Semente" title="LI12324">Semente</a> -&gt; <a href="LI12324.html#t:Tempo" title="LI12324">Tempo</a> -&gt; <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> <a href="#v:movimentaInimigo" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa3.html#v:movimentaInimigo" title="Tarefa3">movimentaInimigo</a></code> movimenta apenas um inimigo.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>movimentaInimigo 1 0.01 Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+</code></strong>                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Plataforma, Plataforma, Plataforma, Plataforma, Alcapao, Alcapao, Alcapao, Plataforma, Plataforma, Vazio]
+                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ] Personagem
+        { velocidade = (0,-1)
+        , tipo = Fantasma
+        , posicao = (2.5,5.5)
+        , direcao = Norte
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }
+Personagem {velocidade = (0.0,-1.0), tipo = Fantasma, posicao = (2.5,5.49), direcao = Norte, tamanho = (0.5,1.0), emEscada = True, ressalta = True, vida = 1, pontos = 100, aplicaDano = (False,0.0)}
+</pre></div></div><div class="top"><p class="src"><a id="v:auxMovimentaInimigoHorizontalEsq" class="def">auxMovimentaInimigoHorizontalEsq</a> :: <a href="LI12324.html#t:Semente" title="LI12324">Semente</a> -&gt; <a href="LI12324.html#t:Tempo" title="LI12324">Tempo</a> -&gt; <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> <a href="#v:auxMovimentaInimigoHorizontalEsq" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa3.html#v:auxMovimentaInimigoHorizontalEsq" title="Tarefa3">auxMovimentaInimigoHorizontalEsq</a></code> movimenta apenas um inimigo para movimentos para o lado esquerdo.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>auxMovimentaInimigoHorizontalEsq 1 0.01 Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+</code></strong>                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Plataforma, Plataforma, Plataforma, Plataforma, Alcapao, Alcapao, Alcapao, Plataforma, Plataforma, Vazio]
+                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ] Personagem
+        { velocidade = (-1,0)
+        , tipo = Fantasma
+        , posicao = (2.25,2.5)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }
+Personagem
+        { velocidade = (-1,0)
+        , tipo = Fantasma
+        , posicao = (2.24,2.5)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }
+</pre></div></div><div class="top"><p class="src"><a id="v:auxMovimentaInimigoHorizontalDir" class="def">auxMovimentaInimigoHorizontalDir</a> :: <a href="LI12324.html#t:Semente" title="LI12324">Semente</a> -&gt; <a href="LI12324.html#t:Tempo" title="LI12324">Tempo</a> -&gt; <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> <a href="#v:auxMovimentaInimigoHorizontalDir" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa3.html#v:auxMovimentaInimigoHorizontalDir" title="Tarefa3">auxMovimentaInimigoHorizontalDir</a></code> movimenta apenas um inimigo para movimentos para o lado direito.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>auxMovimentaInimigoHorizontalDir 213214 0.01 Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+</code></strong>                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Plataforma, Plataforma, Plataforma, Plataforma, Vazio, Vazio, Vazio, Plataforma, Plataforma, Vazio]
+                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ] Personagem
+        { velocidade = (1,0)
+        , tipo = Fantasma
+        , posicao = (2.25,2.5)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }
+Personagem
+        { velocidade = (1,0)
+        , tipo = Fantasma
+        , posicao = (2.26,2.5)
+        , direcao = Este
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }
+</pre></div></div><div class="top"><p class="src"><a id="v:auxMovimentaInimigoEscadas" class="def">auxMovimentaInimigoEscadas</a> :: <a href="LI12324.html#t:Semente" title="LI12324">Semente</a> -&gt; <a href="LI12324.html#t:Tempo" title="LI12324">Tempo</a> -&gt; <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> <a href="#v:auxMovimentaInimigoEscadas" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa3.html#v:auxMovimentaInimigoEscadas" title="Tarefa3">auxMovimentaInimigoEscadas</a></code> movimenta apenas um inimigo para movimentos em escadas.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>auxMovimentaInimigoEscadas 213214 0.01 Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+</code></strong>                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                 ,[Plataforma, Plataforma, Plataforma, Plataforma, Vazio, Vazio, Vazio, Plataforma, Plataforma, Vazio]
+                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Vazio, Vazio, Escada, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                 ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                 ] Personagem
+        { velocidade = (0,-1)
+        , tipo = Fantasma
+        , posicao = (2.5,5.5)
+        , direcao = Norte
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }
+Personagem
+        { velocidade = (0,-1)
+        , tipo = Fantasma
+        , posicao = (2.5,5.49)
+        , direcao = Norte
+        , tamanho = (0.5,1)
+        , emEscada = True
+        , ressalta = True
+        , vida = 1
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }
+</pre></div></div></div></div><div id="footer"><p>Produced by <a href="http://www.haskell.org/haddock/">Haddock</a> version 2.26.0</p></div></body></html>

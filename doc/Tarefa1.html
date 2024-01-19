@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Tarefa1</title><link href="linuwial.css" rel="stylesheet" type="text/css" title="Linuwial" /><link rel="stylesheet" type="text/css" href="quick-jump.css" /><link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700" /><script src="haddock-bundle.min.js" async="async" type="text/javascript"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({ tex2jax: { processClass: "mathjax", ignoreClass: ".*" } });</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script></head><body><div id="package-header"><span class="caption">primate-kong-0.1.0.0</span><ul class="links" id="page-menu"><li><a href="index.html">Contents</a></li><li><a href="doc-index.html">Index</a></li></ul></div><div id="content"><div id="module-header"><table class="info"><tr><th valign="top">Copyright</th><td>Jeremias do Carmo Almeida de Sousa &lt;a106008@alunos.uminho.pt&gt;<br />Tiago Matos Guedes &lt;a97369@alunos.uminho.pt&gt;</td></tr><tr><th>Safe Haskell</th><td>Safe-Inferred</td></tr><tr><th>Language</th><td>Haskell2010</td></tr></table><p class="caption">Tarefa1</p></div><div id="description"><p class="caption">Description</p><div class="doc"><p>M&#243;dulo para a realiza&#231;&#227;o da Tarefa 1 de LI1 em 2023/24.</p></div></div><div id="synopsis"><details id="syn"><summary>Synopsis</summary><ul class="details-toggle" data-details-id="syn"><li class="src short"><a href="#v:colisoesParede">colisoesParede</a> :: <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Bool.html#t:Bool" title="Data.Bool">Bool</a></li><li class="src short"><a href="#v:colisoesPersonagens">colisoesPersonagens</a> :: <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Bool.html#t:Bool" title="Data.Bool">Bool</a></li><li class="src short"><a href="#v:checkProxParede">checkProxParede</a> :: <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Bool.html#t:Bool" title="Data.Bool">Bool</a></li><li class="src short"><a href="#v:hitBoxBloco">hitBoxBloco</a> :: <a href="LI12324.html#t:Posicao" title="LI12324">Posicao</a> -&gt; <a href="LI12324.html#t:Hitbox" title="LI12324">Hitbox</a></li><li class="src short"><a href="#v:checkProxMargens">checkProxMargens</a> :: <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Bool.html#t:Bool" title="Data.Bool">Bool</a></li><li class="src short"><a href="#v:hitBoxPersonagem">hitBoxPersonagem</a> :: <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="LI12324.html#t:Hitbox" title="LI12324">Hitbox</a></li><li class="src short"><a href="#v:intersectHitboxs">intersectHitboxs</a> :: <a href="LI12324.html#t:Hitbox" title="LI12324">Hitbox</a> -&gt; <a href="LI12324.html#t:Hitbox" title="LI12324">Hitbox</a> -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Bool.html#t:Bool" title="Data.Bool">Bool</a></li><li class="src short"><a href="#v:tamanhoMapa">tamanhoMapa</a> :: <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; (<a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Prelude.html#t:Double" title="Prelude">Double</a>, <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Prelude.html#t:Double" title="Prelude">Double</a>)</li><li class="src short"><a href="#v:aproxPerMatriz">aproxPerMatriz</a> :: <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="LI12324.html#t:Posicao" title="LI12324">Posicao</a></li><li class="src short"><a href="#v:blocoNaMatriz">blocoNaMatriz</a> :: <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Posicao" title="LI12324">Posicao</a> -&gt; <a href="LI12324.html#t:Bloco" title="LI12324">Bloco</a></li></ul></details></div><div id="interface"><h1>Documentation</h1><div class="top"><p class="src"><a id="v:colisoesParede" class="def">colisoesParede</a> :: <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Bool.html#t:Bool" title="Data.Bool">Bool</a> <a href="#v:colisoesParede" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa1.html#v:colisoesParede" title="Tarefa1">colisoesParede</a></code> verifica se a personagem em quest&#227;o colide com uma parede ou com uma borda do mapa.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>colisoesParede Personagem
+</code></strong>        { velocidade = (0,0)
+        , tipo = Jogador
+        , posicao = (0.26,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 100
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        } m1 = Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                   ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                   ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                   ,[Plataforma, Plataforma, Vazio, Vazio, Vazio, Vazio, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                   ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                   ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                   ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                   ]
+False
+</pre><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>colisoesParede Personagem
+</code></strong>        { velocidade = (0,0)
+        , tipo = Jogador
+        , posicao = (0.25,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 100
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        } m1 = Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                   ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                   ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                   ,[Plataforma, Plataforma, Vazio, Vazio, Vazio, Vazio, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                   ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                   ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                   ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                    ]
+True
+</pre></div></div><div class="top"><p class="src"><a id="v:colisoesPersonagens" class="def">colisoesPersonagens</a> :: <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Bool.html#t:Bool" title="Data.Bool">Bool</a> <a href="#v:colisoesPersonagens" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa1.html#v:colisoesPersonagens" title="Tarefa1">colisoesPersonagens</a></code> verifica se as personagens em quest&#227;o colidem.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>colisoesPersonagens Personagem
+</code></strong>        { velocidade = (0,0)
+        , tipo = Jogador
+        , posicao = (1.01,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 100
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        } Personagem
+        { velocidade = (0,0)
+        , tipo = Jogador
+        , posicao = (0.5,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 100
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }
+False
+</pre><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>colisoesPersonagens Personagem
+</code></strong>        { velocidade = (0,0)
+        , tipo = Jogador
+        , posicao = (1,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 100
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        } Personagem
+        { velocidade = (0,0)
+        , tipo = Jogador
+        , posicao = (0.5,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 100
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }
+True
+</pre></div></div><div class="top"><p class="src"><a id="v:checkProxParede" class="def">checkProxParede</a> :: <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Bool.html#t:Bool" title="Data.Bool">Bool</a> <a href="#v:checkProxParede" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code>checkProxBlocoParede</code> verifica se a personagem em quest&#227;o est&#233; em colis&#227;o com um bloco de plataforma do mapa, excepto para as posi&#231;&#245;es das margens (x <a href="1">e x</a> tamanho do mapa e y &lt; 1), que retorna sempre Vazio.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>checkProxParede Personagem
+</code></strong>        { velocidade = (0,0)
+        , tipo = Jogador
+        , posicao = (2.25,3)
+        , direcao = Oeste
+        , tamanho = (0.5,1.0)
+        , emEscada = False
+        , ressalta = False
+        , vida = 100
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        } Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                             ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                             ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                             ,[Plataforma, Plataforma, Vazio, Vazio, Vazio, Vazio, Plataforma, Plataforma, Plataforma, Plataforma]
+                                             ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                             ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                             ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                             ]
+True
+</pre></div></div><div class="top"><p class="src"><a id="v:hitBoxBloco" class="def">hitBoxBloco</a> :: <a href="LI12324.html#t:Posicao" title="LI12324">Posicao</a> -&gt; <a href="LI12324.html#t:Hitbox" title="LI12324">Hitbox</a> <a href="#v:hitBoxBloco" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa1.html#v:hitBoxBloco" title="Tarefa1">hitBoxBloco</a></code> verifica a hitBox de um bloco numa certa posi&#231;&#227;o.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>hitBoxBloco (0,0)
+</code></strong>((0.0,1.0),(1.0,0.0))
+</pre></div></div><div class="top"><p class="src"><a id="v:checkProxMargens" class="def">checkProxMargens</a> :: <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Bool.html#t:Bool" title="Data.Bool">Bool</a> <a href="#v:checkProxMargens" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa1.html#v:checkProxMargens" title="Tarefa1">checkProxMargens</a></code> verifica se a personagem em quest&#227;o est&#225; no limite esquerdo ou direito do mapa.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>checkProxMargens Personagem
+</code></strong>        { velocidade = (0,0)
+        , tipo = Jogador
+        , posicao = (0.26,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1.0)
+        , emEscada = False
+        , ressalta = False
+        , vida = 100
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        } Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                             ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                             ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                             ,[Plataforma, Plataforma, Vazio, Vazio, Vazio, Vazio, Plataforma, Plataforma, Plataforma, Plataforma]
+                                             ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                             ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                             ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                             ]
+False
+</pre><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>checkProxMargens Personagem
+</code></strong>        { velocidade = (0,0)
+        , tipo = Jogador
+        , posicao = (0.25,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1.0)
+        , emEscada = False
+        , ressalta = False
+        , vida = 100
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        } Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                             ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                             ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                             ,[Plataforma, Plataforma, Vazio, Vazio, Vazio, Vazio, Plataforma, Plataforma, Plataforma, Plataforma]
+                                             ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                             ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                             ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                             ]
+True
+</pre></div></div><div class="top"><p class="src"><a id="v:hitBoxPersonagem" class="def">hitBoxPersonagem</a> :: <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="LI12324.html#t:Hitbox" title="LI12324">Hitbox</a> <a href="#v:hitBoxPersonagem" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa1.html#v:hitBoxPersonagem" title="Tarefa1">hitBoxPersonagem</a></code> calcula literalmente a hitbox da personagem em quest&#227;o.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>hitBoxPersonagem Personagem
+</code></strong>        { velocidade = (0,0)
+        , tipo = Jogador
+        , posicao = (0.5,2.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1.0)
+        , emEscada = False
+        , ressalta = False
+        , vida = 100
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }
+((0.25,2.0),(0.75,3.0))
+</pre></div></div><div class="top"><p class="src"><a id="v:intersectHitboxs" class="def">intersectHitboxs</a> :: <a href="LI12324.html#t:Hitbox" title="LI12324">Hitbox</a> -&gt; <a href="LI12324.html#t:Hitbox" title="LI12324">Hitbox</a> -&gt; <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Data-Bool.html#t:Bool" title="Data.Bool">Bool</a> <a href="#v:intersectHitboxs" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa1.html#v:intersectHitboxs" title="Tarefa1">intersectHitboxs</a></code> verifica se existe algum tipo de interse&#231;&#227;o na hitbox de duas personagens distintas.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>intersectHitboxs ((0.25,6.0),(0.75,5.0)) ((0.65,6.0),(1.15,5.0))
+</code></strong>True
+</pre><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>intersectHitboxs ((0.25,6.0),(0.75,5.0)) ((1.25,6.0),(1.75,5.0))
+</code></strong>False
+</pre></div></div><div class="top"><p class="src"><a id="v:tamanhoMapa" class="def">tamanhoMapa</a> :: <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; (<a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Prelude.html#t:Double" title="Prelude">Double</a>, <a href="file:///home/guedes674/.ghcup/ghc/9.2.8/share/doc/ghc-9.2.8/html/libraries/base-4.16.4.0/Prelude.html#t:Double" title="Prelude">Double</a>) <a href="#v:tamanhoMapa" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa1.html#v:tamanhoMapa" title="Tarefa1">tamanhoMapa</a></code> calcula a altura e largura do mapa em quest&#227;oo atrav&#233;s da matriz de blocos do mapa.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>tamanhoMapa (Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+</code></strong>                                                    ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                    ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                    ,[Plataforma, Plataforma, Vazio, Vazio, Vazio, Vazio, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                    ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                    ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                    ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                    ]
+(10.0,7.0)
+</pre></div></div><div class="top"><p class="src"><a id="v:aproxPerMatriz" class="def">aproxPerMatriz</a> :: <a href="LI12324.html#t:Personagem" title="LI12324">Personagem</a> -&gt; <a href="LI12324.html#t:Posicao" title="LI12324">Posicao</a> <a href="#v:aproxPerMatriz" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code><a href="Tarefa1.html#v:aproxPerMatriz" title="Tarefa1">aproxPerMatriz</a></code> aproxima a posi&#231;&#227;o da personagem &#224; posi&#231;&#227;o da matriz mais pr&#243;xima.</p><h2>Exemplos de utiliza&#231;&#227;oo:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>aproxPerMatriz = Personagem
+</code></strong>        { velocidade = (0,0)
+        , tipo = Jogador
+        , posicao = (1.25,5.5)
+        , direcao = Oeste
+        , tamanho = (0.5,1)
+        , emEscada = False
+        , ressalta = False
+        , vida = 100
+        , pontos = 100
+        , aplicaDano = (False,0.0)
+        }
+(1.0,5.0)
+</pre></div></div><div class="top"><p class="src"><a id="v:blocoNaMatriz" class="def">blocoNaMatriz</a> :: <a href="LI12324.html#t:Mapa" title="LI12324">Mapa</a> -&gt; <a href="LI12324.html#t:Posicao" title="LI12324">Posicao</a> -&gt; <a href="LI12324.html#t:Bloco" title="LI12324">Bloco</a> <a href="#v:blocoNaMatriz" class="selflink">#</a></p><div class="doc"><p>A fun&#231;&#227;o <code>posicaoBloco</code> indica qual tipo de bloco se situa na posicao em quest&#227;o.</p><h2>Exemplos de utiliza&#231;&#227;o:</h2><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>blocoNaMatriz (Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+</code></strong>                                                      ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                      ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                      ,[Plataforma, Plataforma, Vazio, Vazio, Vazio, Vazio, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                      ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                      ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                      ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                      ] (1,3)
+Plataforma
+</pre><pre class="screen"><code class="prompt">&gt;&gt;&gt; </code><strong class="userinput"><code>blocoNaMatriz (Mapa ((0.5, 5.5), Oeste) (0.5, 2.5) [[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+</code></strong>                                                      ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                      ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio]
+                                                      ,[Plataforma, Plataforma, Vazio, Vazio, Vazio, Vazio, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                      ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                      ,[Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Vazio, Escada, Vazio]
+                                                      ,[Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma, Plataforma]
+                                                      ] (0,1)
+Vazio
+</pre></div></div></div></div><div id="footer"><p>Produced by <a href="http://www.haskell.org/haddock/">Haddock</a> version 2.26.0</p></div></body></html>
