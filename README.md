@@ -35,3 +35,5 @@ cabal repl --build-depends=QuickCheck,doctest --with-ghc=doctest
 ## Projeto efetuado por:
 
 Tiago Matos Guedes a97369
+
+Nota : 17
